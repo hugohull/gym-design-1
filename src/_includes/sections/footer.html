@@ -2,101 +2,58 @@
 <!--                   Footer                     -->
 <!-- ============================================ -->
 
-<!--NOTE: Make sure the section above this footer has the same background color as the footer for a seamless trasition between them-->
-
-<footer id="cs-footer-1783">
-    <!--Contact Info-->
-    <div class="cs-card-group">
-        {% if showFooterCards !== false %}
-            <div class="cs-card">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="/assets/svgs/dumbbell.svg" alt="location" loading="lazy" decoding="async" height="32" width="32">
-                    <img class="cs-mask" src="/assets/svgs/single-splash-medium.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" height="120" width="120">
-                </picture>
-                <div class="cs-flex">
-                    <h3 class="cs-h3">Join Today</h3>
-                    <span class="cs-card-info">Your next session starts here.<br>Start today.</span>
-                </div>
-            </div>
-            <div class="cs-card">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-footer-clock.svg" alt="clock" loading="lazy" decoding="async" height="32" width="32">
-                    <img class="cs-mask" src="/assets/svgs/single-splash-medium.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" height="120" width="120">
-                </picture>
-                <div class="cs-flex">
-                    <h3 class="cs-h3">Working Hours</h3>
-                    <span class="cs-card-info">Monday to Saturday: 10:00 to 20:00 </span>
-                    <span class="cs-card-info">Sunday: Closed</span>
-                </div>
-            </div>
-            <div class="cs-card">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-footer-call.svg" alt="phone" loading="lazy" decoding="async" height="32" width="32">
-                    <img class="cs-mask cs-mask-desktop" src="/assets/svgs/single-splash-medium.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" height="120" width="120">
-                    <img class="cs-mask cs-mask-mobile" src="/assets/svgs/single-splash-dark.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" height="120" width="120">
-                </picture>
-                <div class="cs-flex">
-                    <h3 class="cs-h3">Contact</h3>
-                    <a href="tel:{{client.phoneForTel}}" class="cs-card-info">{{client.phoneForTel}} </a>
-                    <a href="mailto:{{client.email}}" class="cs-card-info">{{client.email}}</a>
-                </div>
-            </div>
-        {% endif %}
-        <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/long-texture-dark.svg" alt="graphic" height="151" width="1920" loading="lazy" decoding="async">
-    </div>
+<footer id="cs-footer-1761">
     <div class="cs-container">
         <!-- Logo Group -->
         <div class="cs-logo-group">
-            <a aria-label="go back to home" class="cs-logo" href="">
-                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/HHWD-logo-light.svg" alt="logo" width="240" height="32">
-            </a>
-            <p class="cs-text">
-                Welcome to {{client.name}}. We’re here to help you train consistently, improve your strength and build lasting fitness in a focused environment.
-            </p>
+            <img class="cs-logomark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-logomark.svg" alt="logo" loading="lazy" decoding="async" height="100" width="122">
+            <h2 class="cs-title">Achieve <br>Wellbeing</h2>
+            <span class="cs-outline">Core Strength</span>
+        </div>
+        <div class="cs-ul-wrapper">
+            <!-- Contact Info -->
+            <img class="cs-logo light" src="/assets/svgs/HHWD-logo.svg" alt="logo" loading="lazy" decoding="async" height="48" width="217">
+            <img class="cs-logo dark" src="/assets/svgs/HHWD-logo-light.svg" alt="logo" loading="lazy" decoding="async" height="48" width="217">
+            <p class="cs-text">Welcome to {{client.name}}! We believe that true wellness encompasses the mind, body & soul. </p>
+            <ul class="cs-ul cs-ul-contact">
+                <li class="cs-li">
+                    <span class="cs-topper">Call us anytime</span>
+                    <a class="cs-contact" href="">{{client.phoneForTel}}</a>
+                </li>
+                <li class="cs-li">
+                    <span class="cs-topper">Visit our location</span>
+                    <a class="cs-contact" href="">{{client.address.lineOne}} <br>{{client.address.city}}, {{client.address.zip}}</a>
+                </li>
+            </ul>
         </div>
         <!-- Links -->
         <div class="cs-ul-wrapper">
             <span class="cs-header">Our Services</span>
             <ul class="cs-ul">
                 <li class="cs-li">
-                    <a class="cs-link" href="/#meet-team-1794">Our Team</a>
+                    <a class="cs-link" href="">Personal Training</a>
                 </li>
                 <li class="cs-li">
-                    <a class="cs-link" href="/#gallery-404">Equipment</a>
+                    <a class="cs-link" href="">Group Workout</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="">Muscle Building</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="">Virtual Gym Training</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="">Weightloss Training</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="">Body Stretching</a>
                 </li>
             </ul>
-        </div>
-        <div class="cs-ul-wrapper">
-            <span class="cs-header">Useful Links</span>
-            <ul class="cs-ul">
-                <li class="cs-li">
-                    <a class="cs-link" href="/#sbs-1815">About Us</a>
-                </li>
-                <li class="cs-li">
-                    <a class="cs-link" href="/#pricing-1791">Pricing</a>
-                </li>
-                <li class="cs-li">
-                    <a class="cs-link" href="/#reviews-1833">Reviews</a>
-                </li>
-                <li class="cs-li">
-                    <a class="cs-link" href="/join-now">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="cs-contact">
-            <div class="cs-contact-info">
-                <span class="cs-topper">Call us</span>
-                <a href="tel:{{client.phoneForTel}}" class="cs-contact-link">{{client.phoneForTel}}</a>
-            </div>
-            <div class="cs-contact-info">
-                <span class="cs-topper">Find us</span>
-                <a href="{{client.address.mapLink}}" class="cs-contact-link">{{client.address.lineOne}}, {{client.address.city}}, {{client.address.state}}, {{client.address.zip}}</a>
-            </div>
         </div>
     </div>
     <div class="cs-bottom">
         <span class="cs-credit">
-            © Copyright 2026 - <a href="" class="cs-credit-link" target="_blank">{{client.name}}</a>
+            © Copyright 2026 <a href="" class="cs-credit-link" target="_blank">{{client.name}}</a>
         </span>
         <div class="cs-bottom-links">
             <a href="" class="cs-bottom-link">Terms & Conditions</a>

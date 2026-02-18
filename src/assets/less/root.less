@@ -1335,173 +1335,77 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #cs-footer-1783 {
+    #cs-footer-1761 {
         padding: var(--sectionPadding);
-        padding-bottom: clamp(1.875rem, 5vw, 3.125rem);
-        /* change this to match the color of the section above the footer */
-        background-color: var(--lightMedium);
-        overflow: hidden;
         /* 30px - 50px */
+        padding-bottom: clamp(1.875rem, 5vw, 3.125rem);
         position: relative;
-        z-index: 1;
-
-        .cs-card-group {
-            /* reset on tablet */
-            max-width: (550/16rem);
-            margin: auto;
-            /* 60px - 100px*/
-            padding: 0 0 clamp(3.75rem, 7vw, 6.25rem) 0;
-            display: grid;
-            /* 20px - 58px */
-            gap: clamp(1.25rem, 4vw, 3.625rem);
-        }
-
-        .cs-card {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            /* 16px - 24px */
-            gap: clamp(1rem, 2vw, 1.5rem);
-        }
-
-        .cs-card:last-of-type {
-            .cs-icon-desktop {
-                display: none;
-            }
-
-            .cs-icon-mobile {
-                display: block;
-            }
-
-            .cs-mask-desktop {
-                display: none;
-            }
-
-            .cs-mask-mobile {
-                display: block;
-            }
-        }
-
-        .cs-picture {
-            padding: (24/16rem);
-            background-color: var(--primary);
-            display: block;
-            position: relative;
-            overflow: visible;
-        }
-
-        .cs-icon {
-            width: (32/16rem);
-            height: auto;
-            display: block;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cs-mask {
-            width: (88/16rem);
-            height: auto;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .cs-h3 {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 2vw, 1.5625rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            margin: 0;
-            color: var(--bodyTextColorWhite);
-        }
-
-        .cs-card-info {
-            font-size: (16/16rem);
-            text-decoration: none;
-            line-height: 1.5em;
-            color: var(--bodyTextColorWhite);
-            opacity: .8;
-            display: block;
-            transition: color 0.3s;
-
-            &:hover {
-                color: var(--primaryLight);
-            }
-        }
 
         .cs-container {
             width: 100%;
-            /* reset on tablet */
-            max-width: (550/16rem);
+            max-width: (1280/16rem);
             margin: auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            /* 32px - 48px */
-            gap: clamp(2rem, 7vw, 3rem);
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            column-gap: (68/16rem);
         }
 
         .cs-logo-group {
             /* takes up all the space, lets the other ul's wrap below it */
             width: 100%;
+            /* 40px - 60px */
+            margin: 0 0 clamp(2.5rem, 7vw, 3.75rem);
+            position: relative;
+        }
+
+        .cs-logomark {
+            width: auto;
+            height: (100/16rem);
+            opacity: 0.12;
+        }
+
+        .cs-title {
+            /* 31px - 39px */
+            font-size: clamp(1.9375rem, 7vw, 3.0625rem);
+            max-width: 23ch;
+            margin: (48/16rem) 0 (8/16rem);
+        }
+
+        .cs-outline {
+            /* 31px - 39px */
+            font-size: clamp(1.9375rem, 1vw, 2.4375rem);
+            text-transform: uppercase;
+            font-weight: 900;
+            line-height: 1.2em;
+            color: #fff;
+            /* text outline styles */
+            -webkit-text-stroke: 1px var(--primary);
+        }
+
+        .cs-header {
+            font-size: (25/16rem);
+            font-weight: 700;
+            line-height: 1.5em;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+            display: block;
             position: relative;
         }
 
         .cs-logo {
-            width: (210/16rem);
+            width: (217/16rem);
             height: auto;
-            margin: 0 0 (16/16rem) 0;
-            display: block;
         }
 
         .cs-text {
-            max-width: (704/16rem);
-            /* 24px - 40px */
-            margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
-            color: var(--bodyTextColorWhite);
-            opacity: 0.8;
+            max-width: (412/16rem);
+            margin: (16/16rem) 0 0;
         }
 
-        .cs-logo-img {
-            width: 100%;
-            height: auto;
-        }
-
-        .cs-contact {
-            display: grid;
-            gap: (32/16rem);
-        }
-
-        .cs-topper {
-            font-size: (16/16rem);
-            margin-bottom: (4/16rem);
-        }
-
-        .cs-contact-link {
-            font-size: (20/16rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-decoration: none;
-            color: var(--bodyTextColorWhite);
-            transition: color 0.3s;
-
-            &:hover {
-                color: var(--primaryLight);
-            }
-        }
-
-        .cs-header {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 3vw, 1.5625rem);
-            font-weight: 700;
-            line-height: 1.5em;
-            /* 16px - 24px */
-            margin: 0 0 clamp(1rem, 4vw, 1.5rem) 0;
-            color: var(--bodyTextColorWhite);
-            display: block;
-            position: relative;
+        .cs-ul-wrapper {
+            margin: 0 0 (60/16rem);
         }
 
         .cs-ul {
@@ -1512,17 +1416,31 @@
             gap: (12/16rem);
         }
 
+        .cs-ul-contact {
+            /* 32px - 40px */
+            margin: clamp(2rem, 5vw, 2.5rem) 0 0;
+            gap: (32/16rem);
+        }
+
         .cs-li {
             list-style: none;
         }
 
+        .cs-contact {
+            font-size: (20/16rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-decoration: none;
+            color: var(--headerColor);
+        }
+
         .cs-link {
-            font-size: (16/16rem);
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
             text-align: left;
             text-decoration: none;
-            color: var(--bodyTextColorWhite);
-            opacity: .8;
+            color: var(--bodyTextColor);
             display: inline-flex;
             align-items: flex-start;
             gap: (8/16rem);
@@ -1535,62 +1453,57 @@
 
         .cs-bottom {
             width: 100%;
-            max-width: (1280/16rem);
-            /* 60px - 80px */
-            margin: clamp(3.75rem, 7vw, 5rem) auto 0;
-            padding-top: (24/16rem);
-            border-top: 1px solid var(--border-border-10, #e8e8e8);
+            max-width: (1280/16rem); /* 28px - 40px */
+            margin: 0 auto;
+            padding-top: clamp(1.75rem, 3vw, 2.5rem);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
             gap: (12/16rem);
-            justify-content: center;
-            align-items: center;
-            text-align: center;
         }
 
         .cs-credit,
         .cs-bottom-link,
         .cs-credit-link {
-            font-size: (16/16rem);
-            line-height: 1.5em;
-            text-decoration: none;
-            color: var(--bodyTextColorWhite);
-            opacity: .8;
-        }
-
-        .cs-credit {
-            width: 100%;
-            text-align: center;
-        }
-
-        .cs-credit-link {
-            font-size: (16/16rem);
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
             text-decoration: none;
             width: auto;
             margin: 0;
+            color: var(--bodyTextColor);
             display: inline-block;
             position: relative;
             transition: color 0.3s;
+        }
+
+        .cs-credit-link {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            text-decoration: none;
+            width: auto;
+            margin: 0;
+            color: inherit;
+            display: inline-block;
+            position: relative;
 
             &:hover {
-                color: var(--primaryLight);
+                color: var(--primary);
             }
         }
 
         .cs-bottom-links {
-            width: 100%;
             display: flex;
-            justify-content: center;
         }
 
         .cs-bottom-link {
             display: flex;
             align-items: center;
-            transition: color 0.3s;
 
             &:hover {
-                color: var(--primaryLight);
+                color: var(--primary);
             }
 
             &:last-of-type {
@@ -1606,111 +1519,76 @@
                 }
             }
         }
-
-        .cs-graphic {
-            width: 100%;
-            min-width: (1920/16rem);
-            height: auto;
-            object-fit: cover;
-            position: absolute;
-            top: (144/16rem);
-            left: 50%;
-            z-index: -1;
-            transform: translateX(-50%);
-        }
     }
 }
 
-/* Tablet - 600px */
-@media only screen and (min-width: 37.5rem) {
-    #cs-footer-1783 {
-        .cs-card:last-of-type {
-            .cs-icon-desktop {
-                display: block;
-            }
-
-            .cs-icon-mobile {
-                display: none;
-            }
-
-            .cs-mask-desktop {
-                display: block;
-            }
-
-            .cs-mask-mobile {
-                display: none;
-            }
-        }
-
-        .cs-card-group {
-            max-width: (1280/16rem);
-        }
-
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #cs-footer-1761 {
         .cs-container {
-            padding: var(--sectionPadding);
-            padding-left: 0;
-            padding-right: 0;
-            padding-bottom: 0;
-            max-width: (1280/16rem);
-            grid-template-columns: repeat(12, 1fr);
+            justify-content: flex-end;
         }
 
         .cs-logo-group {
-            grid-column: span 12;
+            width: fit-content;
+            margin: 0;
+            margin-right: auto;
         }
 
         .cs-ul-wrapper {
-            grid-column: span 4;
-        }
-
-        .cs-contact {
-            grid-template-columns: repeat(12, 1fr);
-            grid-column: span 12;
-        }
-
-        .cs-table {
-            grid-column: span 12;
+            margin: 0;
         }
 
         .cs-bottom {
-            justify-content: space-between;
-            flex-wrap: nowrap;
-        }
-
-        .cs-credit {
-            text-align: left;
-        }
-
-        .cs-bottom-links {
-            justify-content: flex-end;
+            /* 60px - 80px */
+            margin-top: clamp(3.75rem, 6vw, 5rem);
         }
     }
 }
 
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #cs-footer-1783 {
-        .cs-card-group {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-        }
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #cs-footer-1761 {
+            background-color: transparent;
 
-        .cs-card {
-            grid-column: span 4;
-        }
+            .cs-title,
+            .cs-header,
+            .cs-link,
+            .cs-contact,
+            .cs-credit,
+            .cs-credit-link,
+            .cs-bottom-link {
+                color: var(--bodyTextColorWhite);
+            }
 
-        .cs-logo-group {
-            grid-column: span 4;
-        }
+            .cs-bottom-link,
+            .cs-contact,
+            .cs-credit,
+            .cs-link {
+                opacity: 0.8;
 
-        .cs-ul-wrapper {
-            grid-column: span 2;
-        }
+                &:hover {
+                    color: var(--primary);
+                }
+            }
 
-        .cs-contact {
-            display: flex;
-            flex-direction: column;
-            grid-column: span 4;
+            .cs-logo {
+                /* makes the logo white on dark mode */
+                filter: grayscale(1) brightness(1000%);
+            }
+
+            .cs-logomark {
+                opacity: 0.4;
+            }
+
+            .cs-outline {
+                color: var(--dark);
+            }
+
+            .cs-bottom {
+                border-color: rgba(255, 255, 255, 0.1);
+            }
         }
     }
 }
