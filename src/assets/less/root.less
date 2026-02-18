@@ -1252,82 +1252,184 @@
 <---            CTA             -->
 <--- -------------------------- -*/
 
-/* Mobile First */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #cta-403 {
-    padding: var(--sectionPadding);
-    padding-bottom: 3vw;
-    padding-top: 3vw;
-    background-color: var(--lightMedium);
+    #cta-384 {
+        padding: var(--sectionPadding);
+        position: relative;
 
-    .cs-container {
-      max-width: 80rem;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      box-sizing: border-box;
-    }
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            background-blend-mode: multiply;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
 
-    .cs-content {
-      max-width: 32rem;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+            }
+        }
 
-    .cs-title,
-    .cs-text {
-      color: var(--bodyTextColorWhite);
-    }
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
 
-    .cs-text {
-      opacity: 0.8;
-      margin-bottom: 1rem;
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: (434/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
 
-      &:last-of-type {
-        margin-bottom: 2rem;
-      }
-    }
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
 
-    .cs-background {
-        display: none; // Hides it on mobile
-    }
-  }
-}
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
 
-/* Tablet+ Horizontal Layout */
-@media only screen and (min-width: 48rem) {
-  #cta-403 {
-    .cs-container {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
 
-    .cs-content {
-      align-items: flex-start;
-      text-align: left;
-    }
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
 
-    .cs-background {
-        display: block;
-        margin: 0;
-        width: 30%;
-        max-width: 300px;
+        .cs-image-group {
+            /* everything is in ems so we can scale the container down with a font size */
+            font-size: ~"min(2.6vw, .8em)";
+            width: (543/16em);
+            height: (460/16em);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-bucket {
+            width: (543/16em);
+            height: auto;
+            display: block;
+            position: relative;
 
             img {
                 width: 100%;
                 height: auto;
-                display: block;
+            }
+        }
+
+        .cs-powder {
+            width: (485/16em);
+            height: auto;
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
     }
-  }
-} 
-                                                           
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #cta-384 {
+        .cs-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        .cs-image-group {
+            font-size: ~"min(1.45vw, 1em)";
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #cta-384 {
+            .cs-background {
+                opacity: 0.25;
+                /* brighten the image to be whiter and show up against dark background */
+                filter: grayscale(1) brightness(2000%);
+            }
+
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+        }
+    }
+}                                                         
 
 /*-- -------------------------- -->
 <---          Footer            -->
