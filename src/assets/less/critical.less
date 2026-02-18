@@ -4,10 +4,9 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #hero-1899 {
+    #hero-1839 {
         /* 200px - 300px - leaving extra space for the navigation */
         padding: clamp(12.5rem, 25.95vw, 18.75em) (16/16rem);
-        background-color: var(--light);
         /* prevents the topper line from causing an overflow */
         overflow: hidden;
         position: relative;
@@ -18,38 +17,42 @@
             max-width: (1280/16rem);
             margin: auto;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: (48/16rem);
+            /* 120px - 200px */
+            gap: clamp(7.5rem, 15vw, 12.5rem);
         }
 
         .cs-content {
-            text-align: left;
+            text-align: center;
             width: 100%;
             max-width: (750/16rem);
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
-            align-items: flex-start;
-            position: relative;
-            z-index: 1;
         }
 
         .cs-title {
             /* 49px - 84px */
             font-size: clamp(3.0625rem, 6vw, 5.25rem);
-            letter-spacing: -2px;
-            max-width: 100%;
         }
 
         .cs-title,
         .cs-text {
-            text-align: left;
             color: var(--bodyTextColorWhite);
         }
 
         .cs-text {
             margin-bottom: (32/16rem);
+        }
+
+        .cs-button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: (8/16rem);
         }
 
         .cs-button-solid {
@@ -73,7 +76,7 @@
 
             &:before {
                 content: "";
-                width: 0;
+                width: 0%;
                 height: 100%;
                 background: #000;
                 opacity: 1;
@@ -90,18 +93,6 @@
                     width: 100%;
                 }
             }
-        }
-
-        .cs-content-graphic {
-            width: auto;
-            height: 305%;
-            max-height: (1300/16rem);
-            position: absolute;
-            top: 50%;
-            right: (-64/16rem);
-            left: auto;
-            z-index: -3;
-            transform: translateY(-50%);
         }
 
         .cs-card-group {
@@ -123,7 +114,7 @@
             box-sizing: border-box;
             /* 24px - 40px */
             padding: clamp(1.5rem, 3vw, 2.5rem);
-            background-color: var(--lightMedium);
+            background-color: #fff;
             box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
             display: flex;
             flex-direction: column;
@@ -157,7 +148,7 @@
             text-align: inherit;
             /* 8px - 16px */
             margin: 0 0 clamp(0.5rem, 1.2vw, 1rem) 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--headerColor);
         }
 
         .cs-item-text {
@@ -165,7 +156,7 @@
             line-height: 1.5em;
             margin: 0;
             padding: 0;
-            color: #e8e8e8;
+            color: var(--bodyTextColor);
         }
 
         .cs-link {
@@ -192,22 +183,22 @@
 
         .cs-background {
             width: 100%;
-            height: 100%;
+            height: 50%;
             display: block;
             position: absolute;
             top: 0;
             left: 0;
             z-index: -2;
 
-            /* Overlay on the background image that gets removed at tablet+, in favour of the svg graphic */
             &:before {
+                /* Overlay */
                 content: "";
                 width: 100%;
                 height: 100%;
                 background: #000;
                 /* prevents the cursor from interacting with it */
                 pointer-events: none;
-                opacity: 0.4;
+                opacity: 0.7;
                 display: block;
                 position: absolute;
                 top: 0;
@@ -229,16 +220,16 @@
 
 /* Large Phone/Tablet - 500px */
 @media only screen and (min-width: 31.25rem) {
-    #hero-1899 {
+    #hero-1839 {
         .cs-item {
             flex-direction: row;
             align-items: stretch;
         }
 
         .cs-picture {
-            max-width: (140/16rem);
             height: auto;
             min-height: (140/16rem);
+            max-width: (140/16rem);
         }
 
         .cs-info {
@@ -251,21 +242,9 @@
     }
 }
 
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #hero-1899 {
-        padding-bottom: 0;
-        .cs-background {
-            &::before {
-                content: none;
-            }
-        }
-    }
-}
-
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #hero-1899 {
+    #hero-1839 {
         .cs-item {
             grid-column: span 6;
         }
@@ -276,42 +255,25 @@
     }
 }
 
-/* Desktop Parallax - 1300px */
-@media only screen and (min-width: 81.25rem) {
-    #hero-1899 {
-        .cs-content-graphic {
-            top: 30%;
-        }
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-1839 {
+            .cs-h3,
+            .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
 
-        .cs-background {
-            background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png");
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            /* creates the parallax effect */
-            background-attachment: fixed;
+            .cs-item {
+                background-color: var(--medium);
+            }
 
-            img {
-                display: none;
+            .cs-background {
+                &:before {
+                    opacity: 0.85;
+                }
             }
         }
     }
 }
-
-/* Large Desktop - 1920px */
-@media only screen and (min-width: 120rem) {
-    #hero-1899 {
-        /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
-        padding-bottom: 14vw;
-    }
-}
-
-// /* Dark Mode */
-// @media only screen and (min-width: 0rem) {
-//     body.dark-mode {
-//         #hero-1899 {
-//             background-color: rgba(0, 0, 0, 0.6);
-//         }
-//     }
-// }
                                 
