@@ -1,22 +1,15 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// PAGE STYLES
-// Interior pages have their own stylesheet for styles that only exist on
-// that page. Any styles shared between pages, including repeated sections,
-// should go into root.less
-// ─────────────────────────────────────────────────────────────────────────────
-
 /*-- -------------------------- -->
-<---          Gallery           -->
+<---           Table            -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #gallery-48 {
+    #table-1835 {
         padding: var(--sectionPadding);
         position: relative;
 
         .cs-container {
-            width: 100%;
+            padding-top: 3rem;
             max-width: (1280/16rem);
             margin: auto;
             display: flex;
@@ -24,147 +17,177 @@
             align-items: center;
             /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
         }
 
         .cs-content {
+            /* set text align to left if content needs to be left aligned */
             text-align: center;
             width: 100%;
             display: flex;
             flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
             align-items: center;
         }
 
-        .cs-image-group {
-            /* used rem so it doesn't scale with the font size of on parent */
-            font-size: ~"min(1.1vw, 1em)";
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            /* 8px - 20px */
-            gap: clamp(0.5rem, 2vw, 1.25rem);
+        .cs-title {
+            margin: 0 0 (24/16rem) 0;
         }
 
-        .cs-row {
-            width: 100%;
+        .cs-button-group {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            /* 8px - 20px */
-            gap: clamp(0.5rem, 2vw, 1.25rem);
+            flex-wrap: wrap;
+            gap: (12/16rem);
         }
 
-        .cs-picture {
-            width: 100%;
-            position: relative;
-            display: block;
-            border-radius: (8/16rem);
-            overflow: hidden;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .cs-row-1 {
-            .cs-picture-1 {
-                height: (567/16em);
-            }
-
-            .cs-picture-2 {
-                height: (629/16em);
-            }
-
-            .cs-picture-3 {
-                height: (512/16em);
-            }
-        }
-
-        .cs-row-2 {
-            .cs-picture-1 {
-                height: (492/16em);
-            }
-
-            .cs-picture-2 {
-                height: (517/16em);
-            }
-
-            .cs-picture-3 {
-                height: (629/16em);
-            }
-        }
-
-        .cs-row-3 {
-            .cs-picture-1 {
-                height: (625/16em);
-            }
-
-            .cs-picture-2 {
-                height: (452/16em);
-            }
-
-            .cs-picture-3 {
-                height: (629/16em);
-            }
-        }
-
-        .cs-button-solid {
+        .cs-button {
             font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
             font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
+            line-height: 1.2em;
+            /* 8px - 16px vertical */
+            /* 24px - 32px horizontal */
+            padding: clamp(0.5rem, 3vw, 1rem) clamp(1.5rem, 5vw, 2rem);
+            background-color: #fff;
+            color: var(--bodyTextColor);
+            border: 1px solid #e8e8e8;
+            transition: background-color 0.3s, color 0.3s;
 
             &:hover {
-                &:before {
-                    width: 100%;
+                background-color: var(--primary);
+                cursor: pointer;
+                color: #f7f7f7;
+            }
+
+            &.cs-active {
+                background-color: var(--primary);
+                color: #f7f7f7;
+            }
+        }
+
+        .cs-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            transition: transform 0.7s, opacity 0.3s, visibility 0.5s, top 0.3s, left 0.3s;
+            /* makes the transform scaling origin the top left corner, dictates the direction by which the scale transforms animate towards */
+            transform-origin: left top;
+            transform: scaleY(1);
+
+            &.cs-hidden {
+                /* prevents the mouse from interacting with it */
+                pointer-events: none;
+                /* hidden tables have a 0 opacity, and we animate the opacity to 1 when they become active */
+                opacity: 0;
+                /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
+                visibility: hidden;
+                position: absolute;
+                /* this top and left value help control the animation, by setting it to position absolute and left 0, the table won't fly off screen to the left, it will stop its position to be at the left edge of the .cs-container (left: 0). Same for the bottom:0 value, the table won't go past that position when it animates */
+                bottom: 0;
+                left: 0;
+                /* prevents the hidden tables from overflowing the section, and makes a nice animations to transition to and from */
+                transform: scaleY(0);
+
+                .cs-table {
+                    opacity: 0;
+                    /* when table is hidden, add these styles to the cs-image to animate from when cs-hidden is removed from the .cs-table */
+                    transform: translateY(2.1875rem);
                 }
             }
+        }
+
+        .cs-table {
+            width: 100%;
+            /* removes the default space between table cells that normally exists */
+            border-collapse: collapse;
+        }
+
+        .cs-thead,
+        .cs-tbody {
+            width: 100%;
+        }
+
+        .cs-th,
+        .cs-td,
+        .cs-cta {
+            font-size: (16/16rem);
+            line-height: 1.2em;
+            text-align: center;
+            /* 80px - 120px */
+            min-width: clamp(5rem, 16vw, 7.5rem);
+            padding: (16/16rem) (20/16rem);
+            background-color: #fff;
+            color: var(--headerColor);
+            border: 1px solid #e8e8e8;
+        }
+
+        .cs-thead {
+            .cs-th {
+                background-color: #fee8e8;
+                border: 1px solid #fdd2d2;
+            }
+        }
+
+        .cs-cta {
+            font-weight: 700;
+            width: 100%;
+            color: var(--primary);
+            border: none;
+            display: block;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
     }
 }
 
-/* Dark mode */
-// @media only screen and (min-width: 0rem) {
-//     body.dark-mode {
-//         #gallery-48 {
-//             .cs-title {
-//                 color: var(--bodyTextColorWhite);
-//             }
-//         }
-//     }
-// }
+@media only screen and (min-width: 48rem) {
+    #table-1835 {
+        .cs-container {
+            padding-top: 5rem;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #table-1835 {
+            .cs-button {
+                background-color: var(--medium);
+                color: var(--bodyTextColorWhite);
+                border-color: var(--accent);
+
+                &.cs-active {
+                    background-color: var(--primary);
+                }
+            }
+
+            .cs-th,
+            .cs-td,
+            .cs-cta {
+                background-color: var(--medium);
+                color: var(--bodyTextColorWhite);
+                border-color: var(--accent);
+            }
+
+            .cs-thead {
+                .cs-th {
+                    background-color: var(--accent);
+                }
+            }
+
+            .cs-cta {
+                color: var(--primaryLight);
+            }
+        }
+    }
+}
+                                
