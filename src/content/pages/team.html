@@ -7,114 +7,230 @@ permalink: "/team/"
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/services.css">
+    <link rel="stylesheet" href="/assets/css/team.css">
 {% endblock %}
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
+  <!-- ============================================ -->
+<!--                Meet the Team                 -->
+<!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Project One Gallery</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/project-one/" class="cs-link cs-active">Project One Gallery</a>
-            </div>
-        </div>
-        <!--Background Image-->
-
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
-    </div>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery-48">
-        <div class="cs-container">
+<section id="meet-team-1788">
+    <div class="cs-container">
+        <!--Gallery-->
+        <div class="cs-gallery">
             <div class="cs-content">
-                <span class="cs-topper">Our Portfolio</span>
-                <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
+                <span class="cs-topper">Our Trainers</span>
+                <h2 class="cs-title">Meet Our Expert Fitness Trainers</h2>
+                <a href="" class="cs-button-solid">View Our Team Members</a>
             </div>
-            <div class="cs-image-group">
-                <div class="cs-row cs-row-1">
-                    <!-- Row 1-->
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" width="420" height="567">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" width="420" height="630">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" width="420" height="512">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" width="420" height="492">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" width="420" height="517">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new black window structure" width="420" height="625">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="kitchen rebovation" width="420" height="452">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="bathroom renovation" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+            <!--Picture 1-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-1.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-1.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-1.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link" aria-label="visit instagram" target="_blank">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link" aria-label="visit facebook" target="_blank">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link" aria-label="visit twitter" target="_blank">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Michael Semple</h3>
+                    <span class="cs-job">Fitness Instructor</span>
                 </div>
             </div>
-            <a href="/contact/" class="cs-button-solid">Get Started</a>
+            <!--Picture 2-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-2.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-2.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-2.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Michael Semple</h3>
+                    <span class="cs-job">Fitness Instructor</span>
+                </div>
+            </div>
+            <!--Picture 3-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-3.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-3.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-3.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Michael Semple</h3>
+                    <span class="cs-job">Fitness Instructor</span>
+                </div>
+            </div>
+            <!--Picture 4-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-4.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-4.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-4.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Michael Semple</h3>
+                    <span class="cs-job">Fitness Instructor</span>
+                </div>
+            </div>
+            <!--Picture 5-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-5.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-5.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-5.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Michael Semple</h3>
+                    <span class="cs-job">Fitness Instructor</span>
+                </div>
+            </div>
+            <!--Picture 6-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-6.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-6.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-6.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Michael Semple</h3>
+                    <span class="cs-job">Fitness Instructor</span>
+                </div>
+            </div>
+            <!--Picture 7-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-7.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-7.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-7.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Michael Semple</h3>
+                    <span class="cs-job">Fitness Instructor</span>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>                         
 
     {% include 'sections/cta.html' %}
 
