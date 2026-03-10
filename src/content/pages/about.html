@@ -62,6 +62,9 @@ permalink: "/about/"
             <button class="cs-play" aria-label="click to play video">
                 <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg" alt="play icon" width="24" height="24" aria-hidden="true" decoding="async">
             </button>
+            <button class="cs-pause" aria-label="click to pause video">
+                <img class="cs-icon" src="/assets/svgs/pause.svg" alt="pause icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </button>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
@@ -118,12 +121,7 @@ permalink: "/about/"
     </div>
     <div class="cs-video-wrapper">
         <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a image instead of a video. Don't forget to remove the cs-play button!-->
-        <video loading="lazy" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Videos/gym.mp4" autoplay="false" muted></video>
-    <!-- <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png">
-            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png">
-            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png" alt="body builder" width="630" height="877">
-        </picture> -->
+        <video loading="lazy" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Videos/gym.mp4" autoplay="true" muted></video>
     </div>
     <!--Make sure to download this svg and change the fill color in a code editor to match the color of the section above this stitch-->
     <img class="cs-graphic cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-video-shape-light.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async">

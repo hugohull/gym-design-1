@@ -593,6 +593,27 @@
             }
         }
 
+        .cs-pause {
+            /* 80px - 120px */
+            width: clamp(5rem, 14vw, 7.5rem);
+            height: clamp(5rem, 14vw, 7.5rem);
+            background-color: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9;
+            transition: opacity 0.3s, transform .3s;
+            backdrop-filter: blur(8px);
+
+            &.cs-hide {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+
         .cs-icon {
             width: (20/16rem);
             height: auto;
