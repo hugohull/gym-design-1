@@ -31,4 +31,53 @@
         }
         item.addEventListener('click', onClick)
         }
+
+    // set active nav link based on current page
+    function setActiveNavLink() {
+        // get current page path
+        const currentPath = window.location.pathname;
+        
+        // get all navigation links
+        const navLinks = document.querySelectorAll('#cs-navigation .cs-li-link');
+        
+        // remove cs-active class from all links
+        navLinks.forEach(link => {
+            link.classList.remove('cs-active');
+        });
+        
+        // add cs-active class to the link that matches current path
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // handle root path
+            if (currentPath === '/' && href === '/') {
+                link.classList.add('cs-active');
+            }
+            // handle other paths - match the href with current path
+            else if (href !== '/' && currentPath.startsWith(href)) {
+                link.classList.add('cs-active');
+            }
+        });
+        
+        // handle dropdown parent links - if a dropdown child link is active, mark the parent as active too
+        const dropDownLinks = document.querySelectorAll('#cs-navigation .cs-drop-link');
+        dropDownLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // if this dropdown link matches current path
+            if (currentPath === href || (href !== '/' && currentPath.startsWith(href))) {
+                // find the parent dropdown and its parent link
+                const parentDropdown = link.closest('.cs-dropdown');
+                if (parentDropdown) {
+                    const parentLink = parentDropdown.querySelector(':scope > .cs-li-link');
+                    if (parentLink) {
+                        parentLink.classList.add('cs-active');
+                    }
+                }
+            }
+        });
+    }
+    
+    // run on page load
+    setActiveNavLink();
                                 
