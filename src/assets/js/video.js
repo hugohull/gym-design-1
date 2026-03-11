@@ -1,39 +1,42 @@
-function togglePlayButton() {
-        // Select all elements with the .cs-picture class
-        const pictures = document.querySelectorAll('#services-1838 .cs-video-wrapper');
+function setupVideoControls() {
+        const video = document.querySelector('#services-1838 video');
+        const controlButton = document.querySelector('#services-1838 .cs-video-control');
+        const icon = controlButton.querySelector('.cs-icon');
 
-        // Add a click event listener to each .cs-picture element
-        pictures.forEach(picture => {
-            picture.addEventListener('click', () => {
-                // Select all elements with the .cs-play class
-                const playButtons = document.querySelectorAll('#services-1838 .cs-play');
+        if (!video || !controlButton) {
+            console.error('Video controls not found');
+            return;
+        }
 
-                // Toggle the .cs-hide class on each .cs-play element
-                playButtons.forEach(button => {
-                    button.classList.toggle('cs-hide');
-                });
-            });
+        // Ensure button is clickable
+        controlButton.style.pointerEvents = 'auto';
+
+        // Control button click handler
+        controlButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (video.paused) {
+                video.play();
+                icon.src = '/assets/svgs/pause.svg';
+                icon.alt = 'pause icon';
+                controlButton.setAttribute('aria-label', 'click to pause video');
+            } else {
+                video.pause();
+                icon.src = 'https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg';
+                icon.alt = 'play icon';
+                controlButton.setAttribute('aria-label', 'click to play video');
+            }
+        });
+
+        // If video ends, switch back to play icon
+        video.addEventListener('ended', () => {
+            icon.src = 'https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg';
+            icon.alt = 'play icon';
+            controlButton.setAttribute('aria-label', 'click to play video');
         });
     }
 
     // Call the function to activate the event listeners
-    togglePlayButton();
-
-    function toggleVideoPlayback() {
-        // Select the video element
-        const video = document.querySelector('#services-1838 video');
-
-        // Add a click event listener to the video
-        video.addEventListener('click', () => {
-            // Check if the video is paused
-            if (video.paused) {
-                video.play(); // Play the video if it is paused
-            } else {
-                video.pause(); // Pause the video if it is playing
-            }
-        });
-    }
-
-    // Call the function to activate the event listener
-    toggleVideoPlayback();
+    setupVideoControls();
                                 
