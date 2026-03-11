@@ -11,6 +11,19 @@ function setupVideoControls() {
         // Ensure button is clickable
         controlButton.style.pointerEvents = 'auto';
 
+        // Function to switch icon with fade and scale transition
+        function switchIcon(newSrc, newAlt, ariaLabel) {
+            icon.style.opacity = '0';
+            icon.style.transform = 'scale(0)';
+            setTimeout(() => {
+                icon.src = newSrc;
+                icon.alt = newAlt;
+                controlButton.setAttribute('aria-label', ariaLabel);
+                icon.style.opacity = '1';
+                icon.style.transform = 'scale(1)';
+            }, 150);
+        }
+
         // Control button click handler
         controlButton.addEventListener('click', (e) => {
             e.preventDefault();
@@ -18,22 +31,16 @@ function setupVideoControls() {
 
             if (video.paused) {
                 video.play();
-                icon.src = '/assets/svgs/pause.svg';
-                icon.alt = 'pause icon';
-                controlButton.setAttribute('aria-label', 'click to pause video');
+                switchIcon('/assets/svgs/pause.svg', 'pause icon', 'click to pause video');
             } else {
                 video.pause();
-                icon.src = 'https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg';
-                icon.alt = 'play icon';
-                controlButton.setAttribute('aria-label', 'click to play video');
+                switchIcon('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg', 'play icon', 'click to play video');
             }
         });
 
         // If video ends, switch back to play icon
         video.addEventListener('ended', () => {
-            icon.src = 'https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg';
-            icon.alt = 'play icon';
-            controlButton.setAttribute('aria-label', 'click to play video');
+            switchIcon('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg', 'play icon', 'click to play video');
         });
     }
 
