@@ -5,11 +5,9 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #hero-1839 {
-        /* 200px - 300px - leaving extra space for the navigation */
-        padding: clamp(12.5rem, 25.95vw, 18.75em) 1rem;
-        padding-bottom: 10vw;
-        /* prevents the topper line from causing an overflow */
-        overflow: hidden;
+        /* top space for the navigation and hero content */
+        padding: clamp(12.5rem, 25.95vw, 18.75rem) (16/16rem) clamp(6rem, 10vw, 8rem);
+        overflow: visible;
         position: relative;
         z-index: 1;
 
@@ -21,8 +19,8 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            /* 120px - 200px */
-            gap: clamp(7.5rem, 15vw, 12.5rem);
+            /* space between hero copy and cards */
+            gap: clamp(3rem, 6vw, 5rem);
         }
 
         .cs-content {
@@ -98,8 +96,10 @@
 
         .cs-card-group {
             width: 100%;
-            margin: 0;
+            margin: clamp(-4rem, -8vw, -2.5rem) 0 0;
             padding: 0;
+            position: relative;
+            z-index: 2;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             /* 16px - 20px */
@@ -138,7 +138,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-            }
+    }
         }
 
         .cs-h3 {
@@ -222,7 +222,6 @@
 /* Large Phone/Tablet - 500px */
 @media only screen and (min-width: 31.25rem) {
     #hero-1839 {
-        padding-bottom: 10vw;
         .cs-item {
             flex-direction: row;
             align-items: stretch;
@@ -251,8 +250,20 @@
             grid-column: span 6;
         }
 
+        .cs-container {
+            gap: clamp(5rem, 8vw, 7rem);
+        }
+
+        .cs-card-group {
+            margin-top: clamp(-2.5rem, -4vw, -1.5rem);
+        }
+
         .cs-background {
-            height: 70%;
+            height: 78%;
+        }
+
+        .cs-content {
+            max-width: (700/16rem);
         }
     }
 }
