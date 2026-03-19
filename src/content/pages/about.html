@@ -11,6 +11,7 @@ permalink: "/about/"
     <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
     <link rel="stylesheet" href="/assets/css/about.css">
     <script src="/assets/js/video.js" defer></script>
+    <script src="/assets/js/wcu.js" defer></script>
 {% endblock %}
 
 {% block body %}
@@ -47,6 +48,95 @@ permalink: "/about/"
     <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
     <img class="cs-graphic cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
 </section>
+
+<!-- ============================================ -->
+<!--                 Why Choose Us                -->
+<!-- ============================================ -->
+
+<section id="why-choose-1824">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym5.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym5.jpg" alt="body builder" width="562" height="568">
+            </picture>
+            <picture class="cs-floater">
+                <img class="cs-floater-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/weights.svg" alt="icon" width="59" height="48">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose Us</span>
+            <h2 class="cs-title">Amazing Features Of Stitch Gym</h2>
+        </div>
+        <div class="cs-flex">
+            <div class="cs-box">
+                <div class="cs-box-content" data-box="one">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Our Mission & Approach</h3>
+                    <p class="cs-box-text">
+                        Take advantage of our spacious gym equipped with a wide range of gym fitness machines so you can achieve the maximum benefits.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="two">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">State of The Art Equipment</h3>
+                    <p class="cs-box-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio ab officiis vel tenetur dolorem facilis odit cum molestias aperiam!
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="three">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Education & Top Trainers</h3>
+                    <p class="cs-box-text">
+                        Molestiae illo odit eum iure quas error autem quibusdam in natus iste tenetur molestias expedita pariatur, modi qui.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="four">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Series Results Based 
+                        on Training</h3>
+                    <p class="cs-box-text">
+                        Dicta cupiditate facilis ipsam impedit voluptatibus possimus iure ut distinctio, quo nisi. Adipisci, quos officiis asperiores quaerat delectus deserunt.
+                    </p>
+                </div>
+            </div>
+            <div class="cs-button-group">
+                <button class="cs-button cs-active" data-filter="one">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/house-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Our Mission & Approach</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="two">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/hourglass-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">State of The Art Equipment</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="three">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/book-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Education & Top Trainers</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="one">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/invoice-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Series Results Based on Training</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+                                
 
 <!-- ============================================ -->
 <!--                  Services                    -->
@@ -125,7 +215,195 @@ permalink: "/about/"
     <!--download this and make sure it is the same color as the background of the section above it on dark mode so it makes it look like its one complete shape -->
     <img class="cs-graphic cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-video-shape-dark.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
 </section>
-                                
+
+<!-- ============================================ -->
+<!--                Meet The Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-1746">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Our Trainers</span>
+                <h2 class="cs-title">We’re Making People Healthier, Happier</h2>
+            </div>
+            <a href="" class="cs-button-solid">View Our Team Members</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-1.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-1.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-1.jpg" alt="person" width="305" height="440">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-facebook.svg" alt="facebook" width="20" height="20">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-x.svg" alt="twitter" width="20" height="20">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-instagram.svg" alt="instagram" width="20" height="20">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Michael Semple</span>
+                    <span class="cs-job">Fitness Instructor</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-2.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-2.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-2.jpg" alt="person" width="305" height="440">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-facebook.svg" alt="facebook" width="20" height="20">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-x.svg" alt="twitter" width="20" height="20">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-instagram.svg" alt="instagram" width="20" height="20">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Jose Hawthorne</span>
+                    <span class="cs-job">Nutritionist</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-3.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-3.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-3.jpg" alt="person" width="305" height="440">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-facebook.svg" alt="facebook" width="20" height="20">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-x.svg" alt="twitter" width="20" height="20">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-instagram.svg" alt="instagram" width="20" height="20">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Timothy Andrews</span>
+                    <span class="cs-job">Fitness Instructor</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-4.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-4.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-meet-team-4.jpg" alt="person" width="305" height="440">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-facebook.svg" alt="facebook" width="20" height="20">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-x.svg" alt="twitter" width="20" height="20">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-instagram.svg" alt="instagram" width="20" height="20">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Kathy Vangilder</span>
+                    <span class="cs-job">Nutritionist</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-1832">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Our Members Testimonials</h2>
+        </div>
+        <div class="cs-flex-group cs-flex-group--reverse">
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg" alt="person" width="570" height="680">
+                </picture>
+
+                <!--White SVG Mask. Download the image and change the fill color to match the color of the section background below it-->
+                <img class="cs-mask cs-light" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-paint-stroke.svg" alt="white splatter" width="700" height="666">
+                <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+                <img class="cs-mask cs-dark" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-paint-stroke.svg" alt="white splatter" width="700" height="666">
+            </div>
+            <div class="cs-review-group">
+                <!--Stars-->
+                <img class="cs-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg" alt="quotes" width="97" height="80" aria-hidden="true">
+                <p class="cs-review-text">
+                    ”Great gym! A new gym with modern equipment and facilities makes training so much easier. Always willing to help you with your training”
+                </p>
+                <span class="cs-name">Britney Allison</span>
+                <span class="cs-job">Founder of Yokoloko</span>
+                <!--Quote-->
+                <img class="cs-quote" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-quote.svg" alt="quotes" width="97" height="80" aria-hidden="true">
+            </div>
+        </div>
+        <div class="cs-flex-group">
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg" alt="person" width="570" height="680">
+                </picture>
+
+                <!--White SVG Mask. Download the image and change the fill color to match the color of the section background below it-->
+                <img class="cs-mask cs-light" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-paint-stroke.svg" alt="white splatter" width="700" height="666">
+                <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+                <img class="cs-mask cs-dark" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-paint-stroke.svg" alt="white splatter" width="700" height="666">
+            </div>
+            <div class="cs-review-group">
+                <!--Stars-->
+                <img class="cs-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg" alt="quotes" width="97" height="80" aria-hidden="true">
+                <p class="cs-review-text">
+                    ”Great gym! A new gym with modern equipment and facilities makes training so much easier. Always willing to help you with your training”
+                </p>
+                <span class="cs-name">Britney Allison</span>
+                <span class="cs-job">Founder of Yokoloko</span>
+                <!--Quote-->
+                <img class="cs-quote" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-quote.svg" alt="quotes" width="97" height="80" aria-hidden="true">
+            </div>
+        </div>
+</section>
+                                                                
                                 
 
     {% include 'sections/cta.html' %}
