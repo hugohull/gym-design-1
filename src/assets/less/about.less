@@ -886,6 +886,7 @@
         padding-top: clamp(12.5rem, 31.95vw, 18.75rem);
         overflow-x: clip;
         position: relative;
+        min-height: clamp(32rem, 70vw, 78rem);
 
         .cs-container {
             width: 100%;
@@ -1127,13 +1128,20 @@
             object-fit: cover;
             position: absolute;
             top: -1px;
-            left: 50%;
+            left: 49.95%;
             z-index: 0;
             transform: translateX(-50%);
         }
 
         .cs-dark {
             display: none;
+        }
+
+        .cs-graphic.bottom {
+            bottom: -1px;
+            top: auto;
+            z-index: 2;
+            transform: translateX(-50%) scaleX(-1);
         }
     }
 }
