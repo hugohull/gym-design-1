@@ -883,26 +883,30 @@
     #services-1838 {
         padding: var(--sectionPadding);
         /* 200px - 300px - leaving extra space for the navigation */
-        padding-top: clamp(12.5rem, 31.95vw, 18.75rem);
+        min-height: clamp(38rem, 62vw, 52rem);
+        overflow: visible;
         overflow-x: clip;
         position: relative;
-        min-height: clamp(32rem, 70vw, 78rem);
+        z-index: 1;
 
         .cs-container {
             width: 100%;
             max-width: (1720/16rem);
+            min-height: inherit;
             margin: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            /* 100px - 229px */
-            gap: clamp(6.25rem, 16vw, 14.3125rem);
+            gap: clamp(3rem, 6vw, 5rem);
+            position: relative;
+            z-index: 1;
         }
 
         .cs-content {
             width: 100%;
             max-width: (1280/16rem);
+            margin-top: 2rem;
             pointer-events: none;
             display: flex;
             justify-content: space-between;
@@ -940,16 +944,6 @@
             width: (20/16rem);
             height: auto;
             transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .cs-card-group {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            /* 16px - 20px */
-            gap: clamp(1rem, 2.5vw, 1.25rem);
         }
 
         .cs-item {
@@ -1087,13 +1081,13 @@
 
         .cs-video-wrapper {
             width: 100%;
-            /* changes to 90% at tablet, then back to 100% at desktop */
-            height: 32%;
-            min-height: (520/16rem);
+            height: 100%;
+            min-height: 100%;
             display: block;
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 0;
 
             &:hover {
                 cursor: pointer;
@@ -1140,7 +1134,6 @@
         .cs-graphic.bottom {
             bottom: -1px;
             top: auto;
-            z-index: 2;
             transform: translateX(-50%) scaleX(-1);
         }
     }
@@ -1150,7 +1143,7 @@
 @media only screen and (min-width: 48rem) {
     #services-1838 {
         .cs-card-group {
-            margin: 0;
+            bottom: clamp(-10rem, -11vw, -6rem);
         }
 
         .cs-item {
@@ -1162,8 +1155,7 @@
         }
 
         .cs-video-wrapper {
-            /* changes back to 100% at desktop */
-            height: 60%;
+            height: 100%;
         }
     }
 }
@@ -1172,7 +1164,7 @@
 @media only screen and (min-width: 75rem) {
     #services-1838 {
         .cs-video-wrapper {
-            height: 80%;
+            height: 100%;
         }
 
         .cs-card-group {
@@ -1215,6 +1207,7 @@
 @media only screen and (min-width: 0rem) {
     #meet-team-1746 {
         padding: var(--sectionPadding);
+        padding-top: 0;
         position: relative;
         z-index: 1;
         overflow: hidden;
