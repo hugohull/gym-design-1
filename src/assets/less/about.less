@@ -862,13 +862,29 @@
                 }
             }
 
+            .cs-icon-wrapper {
+                background-color: var(--medium);
+            }
+
+            .cs-button {
+                .cs-icon{
+                    filter: grayscale(1) brightness(1000%);
+                }
+
+                &.cs-active, &:hover {
+                .cs-icon {
+                    filter: grayscale(1) brightness(0%);
+                }
+            }
+            }
+
             .cs-button {
                 border-color: rgba(255, 255, 255, .1);
             }
 
             .cs-arrow {
                 filter: grayscale(1) brightness(300%);
-                opacity: .5;
+                opacity: 1;
             }
         }
     }
