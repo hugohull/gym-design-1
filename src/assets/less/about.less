@@ -841,6 +841,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #why-choose-1824 {
+            background-color: var(--medium);
             .cs-title, .cs-button-text {
                 color: var(--bodyTextColorWhite);
             }
@@ -1129,6 +1130,7 @@
 
         .cs-dark {
             display: none;
+            transform: translateX(-50%) scaleY(-1);
         }
 
         .cs-graphic.bottom {
@@ -1499,32 +1501,6 @@
         position: relative;
         z-index: 1;
 
-        &:before {
-            /* gradient that softens the transition from the pattern to the edge of the section */
-            content: '';
-            width: 100%;
-            height: 20%;
-            background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-            opacity: 1;
-            position: absolute;
-            display: block;
-            top: 0;
-            left: 0;
-        }
-
-        &:after {
-            /* gradient that softens the transition from the pattern to the edge of the section */
-            content: '';
-            width: 100%;
-            height: 20%;
-            background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-            opacity: 1;
-            position: absolute;
-            display: block;
-            bottom: 0;
-            left: 0;
-        }
-
         .cs-container {
             width: 100%;
             /* changes to 1280px at tablet */
@@ -1632,8 +1608,6 @@
             /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
             width: (372/16em);
             height: (352/16em);
-            /* make a white shadow to fade over the texture background behind it so it hides the fact its a mask on top of the image */
-            box-shadow: rgba(255,255,255, 1) 0px -45px 90px 4px;
             position: relative;
             z-index: -1;
         }
@@ -1759,27 +1733,12 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #reviews-1832 {
-            &:before {
-                /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                background: linear-gradient(to bottom,  rgba(8, 32, 50,1) 0%,rgba(8, 32, 50,0) 100%);
-            }
-
-            &:after {
-                /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                background: linear-gradient(to bottom,  rgba(8, 32, 50,0) 0%,rgba(8, 32, 50,1) 100%);
-            }
-
             .cs-title,
             .cs-text,
             .cs-review-text,
             .cs-name,
             .cs-job {
                 color: var(--bodyTextColorWhite);
-            }
-
-            .cs-image-group {
-                /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                box-shadow: rgba(8, 32, 50, 1) 0px -45px 90px 4px;
             }
 
             .cs-quote {
