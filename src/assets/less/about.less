@@ -1448,6 +1448,21 @@
             display: block;
             transition: color 0.3s;
         }
+
+            .cs-graphic {   
+            width: 100%;
+            min-width: 120rem;
+            height: auto;
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%);
+        }
+
+        .cs-dark {
+            display: none;
+        }
     }
 }
 
@@ -1513,6 +1528,7 @@
         padding: var(--sectionPadding);
         padding-top: clamp(1rem , 6vw, 2rem);
         padding-bottom: clamp(3rem , 6vw, 4rem);
+        background-color: var(--lightDark);
         overflow: hidden;
         position: relative;
         z-index: 1;
@@ -1699,6 +1715,21 @@
                 object-fit: cover;
             }
         }
+
+        .cs-graphic {   
+            width: 100%;
+            min-width: 120rem;
+            height: auto;
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            z-index: 0;
+            transform: translateX(-50%);
+        }
+
+        .cs-dark {
+            display: none;
+        }
     }
 }
 
@@ -1749,6 +1780,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #reviews-1832 {
+            background-color: var(--medium);
             .cs-title,
             .cs-text,
             .cs-review-text,
