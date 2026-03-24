@@ -1,4 +1,233 @@
 /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #RTsbs-1819, #RTsbst-1819 {
+        padding: var(--sectionPadding);
+        /* 100px - 200px */
+        padding-bottom: clamp(6.25rem, 8vw, 12.5rem);
+        padding-top: clamp(6.25rem, 10vw, 12.5rem);
+        /* clips anything overflowing */
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (522/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+            position: relative;
+            z-index: 3;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+	    	font-weight: 700;
+	        text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width .3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-image-group {
+            /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+            font-size:~"min(1.8vw, .60rem)";
+            /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+            width: (699/16em);
+            height: (643/16em);
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                /* blur effect */
+                content: '';
+                width: (2000/16rem);
+                height: (2000/16rem);
+                margin-right: (-450/16rem);
+                background-color: rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(60px);
+                position: absolute;
+                display: none;
+                top: (-200/16em);
+                right: 50%;
+                transform: skew(40deg);
+                transform-origin: center;
+                z-index: -1;
+            }
+        }
+
+        .cs-picture {
+            width: auto;
+            height: (643/16em);
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: (0/16em);
+            transform: translateX(-50%);
+
+            img {
+                width: auto;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .cs-splatter {
+            width: (782/16em);
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+            bottom: (-40/16em);
+            right: (0/16em);
+            z-index: -2;
+        }
+
+        .cs-graphic {
+            width: 100%;
+            min-width: (1200/16rem);
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            z-index: 1;
+            transform: translateX(-50%);
+        }
+
+        .cs-dark {
+            display: none;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #RTsbs-1819, #RTsbst-1819 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-image-group {
+            /* set to inherit at Large Desktop */
+            font-size:~"min(1.2vw, 1rem)";
+
+            &:before {
+                display: block;
+            }
+        }
+
+        .cs-content {
+            width: 51%;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #RTsbs-1819, #RTsbst-1819 { 
+            .cs-title, .cs-text {
+                color: var(--bodyTextColorWhite);
+                transition: color .3s;
+            }
+
+            .cs-text {
+                opacity: .8;
+            }
+
+            .cs-light {
+                display: none;
+            }
+
+            .cs-dark {
+                display: block;
+            }
+        }
+    }
+}
+
+/* Dark Mode (Large Desktop) 1500px */
+@media only screen and (min-width: 93.75rem) {
+    body.dark-mode {
+        #RTsbs-1819, #RTsbst-1819 {
+            &:before {
+                /* creates a gradient to fade out the blur into the background color on dark mode. Adjust the color to match whatever the background color you change it to if you decide to use different dark mode colors */
+                content: '';
+                width: 28%;
+                height: (200/16rem);
+                background: linear-gradient(to bottom,  rgba(8,32,50,1) 0%,rgba(255,255,255,0) 100%);
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
 
@@ -6,12 +235,12 @@
 @media only screen and (min-width: 0rem) {
     #gallery-404 {
         padding: var(--sectionPadding);
+        background-color: var(--lightDark);
         overflow: hidden;
         position: relative;
         padding-top: 0;
 
         .cs-container {
-            padding-top: 6rem;
             width: 100%;
             /* changes to 1280px at tablet */
             max-width: (550/16rem);
@@ -170,7 +399,7 @@
             min-width: 120rem;
             height: auto;
             display: block;
-            z-index: -1;
+            z-index: 0;
         }
 
         .cs-dark {
@@ -185,7 +414,6 @@
         padding-bottom: 1vw;
 
         .cs-container {
-            padding-top: 10rem;
             max-width: (1280/16rem);
         }
 
@@ -254,8 +482,9 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #gallery-404 {
+            background-color: var(--medium);
             .cs-topper {
-                color: var(--primaryLight);
+                color: var(--primary);
             }
             .cs-title,
             .cs-text,
@@ -265,7 +494,7 @@
 
             .cs-button {
                 &.cs-active {
-                    color: var(--primaryLight);
+                    color: var(--primary);
                 }
             }
             .cs-light {
