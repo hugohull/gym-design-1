@@ -1,233 +1,286 @@
 /*-- -------------------------- -->
-<---        Meet the Team       -->
+<---        Meet The Team       -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #meet-team-1788 {
-        padding: var(--sectionPadding);
+	#meet-team-2435 {
+		padding: var(--sectionPadding);
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
 
-        .cs-container {
-            padding-top: 3rem;
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-            position: relative;
-        }
+		.cs-container {
+			width: 100%;
+			max-width: (1280/16rem);
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			/* 48px - 64px */
+			gap: clamp(3rem, 6vw, 4rem);
+		}
 
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
+		.cs-content {
+			/* set text align to left if content needs to be left aligned */
+			text-align: center;
+			width: 100%;
+			max-width: (900/16rem);
+			display: flex;
+			flex-direction: column;
+			/* centers content horizontally, set to flex-start to left align */
+			align-items: center;
+		}
 
-        .cs-title {
-            max-width: 15ch;
-            /* 24px - 32px */
-            margin: 0 0 clamp(1.5rem, 1vw, 2rem);
-        }
+		.cs-topper {
+			color: var(--secondary);
+		}
 
-        .cs-button-solid {
-            font-size: (16/16rem);
-            font-weight: 700;
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-align: center;
-            text-decoration: none;
-            min-width: (150/16rem);
-            margin: 0;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            color: #fff;
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
+		.cs-title,
+		.cs-text {
+			max-width: 100%;
+			color: var(--bodyTextColor);
+		}
 
-            &:before {
-                content: "";
-                width: 0%;
-                height: 100%;
-                background: #000;
-                opacity: 1;
-                border-radius: (4/16rem);
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: width 0.3s;
-            }
+		.cs-button-solid {
+			font-size: (16/16rem);
+			/* 46px - 56px */
+			line-height: clamp(2.875em, 5.5vw, 3.5em);
+			text-decoration: none;
+			font-weight: 700;
+			text-align: center;
+			min-width: (150/16rem);
+			margin: 0;
+			/* prevents padding from adding to the width */
+			box-sizing: border-box;
+			padding: 0 (24/16rem);
+			background-color: var(--primary);
+			border-radius: (4/16rem);
+			color: #fff;
+			display: inline-block;
+			position: relative;
+			z-index: 1;
 
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
+			&:before {
+				content: "";
+				width: 0%;
+				height: 100%;
+				background: #000;
+				opacity: 1;
+				border-radius: (4/16rem);
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				transition: width 0.3s;
+			}
 
-        .cs-gallery {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(19.0625rem, 1fr));
-            /* 16px - 20px */
-            gap: clamp(1rem, 1.5vw, 1.25rem);
-            position: relative;
-        }
+			&:hover {
+				&:before {
+					width: 100%;
+				}
+			}
+		}
 
-        .cs-item {
-            overflow: hidden;
-            position: relative;
-        }
+		.cs-card-group {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			row-gap: (32/16rem);
+			column-gap: (16/16rem);
+		}
 
-        .cs-image {
-            /* 260px - 440px */
-            min-height: clamp(16.25rem, 60vw, 27.5rem);
-            display: block;
-            position: relative;
+		.cs-item {
+			list-style: none;
+			grid-column: span 12;
+			display: flex;
+			flex-direction: column;
+            background-color: var(--lightDark);
 
-            img {
-                width: 100%;
-                height: 100%;
-                /* makes it act like a background image */
-                object-fit: cover;
-                /* sends top of the image to the top of the parent container */
-                object-position: top;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
+			&:hover {
+				.cs-social {
+					transform: translateY(0);
+				}
+			}
+		}
 
-        .cs-socials {
-            list-style: none;
-            margin: 0;
-            padding: (18/16rem) (10/16rem);
-            background-color: var(--primary);
-            display: flex;
-            flex-direction: column;
-            gap: (20/16rem);
-            position: absolute;
-            top: 0;
-            right: (16/16rem);
-            z-index: 1;
-            /* for the hover effects on tablet+ */
-            transition: top 0.3s cubic-bezier(0.55, 0.21, 0.64, 0.98);
-        }
+		.cs-picture-wrapper {
+			width: 100%;
+			height: (360/16rem);
+			margin-bottom: (20/16rem);
+			overflow: hidden;
+			position: relative;
+		}
 
-        .cs-icon {
-            width: (20/16rem);
-            height: auto;
-            display: block;
-        }
+		.cs-picture {
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: relative;
 
-        .cs-info {
-            min-width: (260/16rem);
-            padding: (16/16rem) (20/16rem);
-            background: rgba(26, 26, 26, 0.6);
-            border-left: 4px solid var(--primary);
-            position: absolute;
-            right: 0;
-            bottom: (16/16rem);
-            /* for the hover effects on tablet+. delayed for a better effect on hover */
-            transition: right 0.4s cubic-bezier(0.55, 0.21, 0.64, 0.98);
-            backdrop-filter: blur(8px);
-        }
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
 
-        .cs-h3 {
-            font-size: (20/16rem);
-            font-weight: 700;
+		.cs-social {
+			padding: (24/16rem) (32/16rem);
+			margin: auto;
+			gap: (24/16rem);
+			overflow: hidden;
+			transform: translateY(150%);
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			left: (16/16rem);
+			right: (16/16rem);
+			bottom: (16/16rem);
+			z-index: 1;
+			transition: transform 0.3s, opacity 0.3s;
+
+			&:before {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background: rgba(3, 7, 17, 0.3);
+				backdrop-filter: blur(22px);
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+		}
+
+		.cs-link {
+			width: (24/16rem);
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.cs-flex {
+			gap: (24/16rem);
+			color: var(--bodyTextColor);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+            padding: 1rem
+		}
+
+		.cs-info {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.cs-name {
+			font-size: (25/16rem);
+            line-height: 1.4em;
+			font-weight: 700;
+			margin: 0 0 (4/16rem);
+		}
+
+		.cs-job {
+			font-size: (16/16rem);
+			line-height: 1.5em;
+			font-weight: 400;
+			margin: 0;
+		}
+
+		.cs-rating {
+			font-size: (39/16rem);
+			font-weight: 700;
             line-height: 1.2em;
-            text-transform: uppercase;
-            margin: 0 0 (4/16rem);
-            color: var(--bodyTextColorWhite);
+			margin: 0;
+			gap: (16/16rem);
+		}
+
+		.cs-rating-count {
+			font-size: (16/16rem);
+			line-height: 1.5em;
+			text-transform: uppercase;
+			font-weight: 400;
+			margin: 0;
+		}
+
+        .cs-item-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
         }
 
-        .cs-job {
-            font-size: (16/16rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            color: var(--primary);
-        }
-    }
+		.cs-background {
+			width: 100%;
+			height: 100%;
+			opacity: 0.08;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -2;
+
+			img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
 }
 
-/* Tablet - 658px */
-@media only screen and (min-width: 41.125rem) {
-    #meet-team-1788 {
-        .cs-content {
-            text-align: left;
-            align-items: flex-start;
-        }
-    }
+/* Tablet - 500px */
+@media only screen and (min-width: 31.25rem) {
+	#meet-team-2435 {
+		.cs-item {
+			grid-column: span 6;
+		}
+	}
 }
-    
-/* Desktop - 10024px */
+
+/* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #meet-team-1788 {
-        .cs-socials {
-            top: -40%;
-        }
+	#meet-team-2435 {
+		.cs-card-group {
+			max-width: none;
+		}
 
-        .cs-social {
-            opacity: 0;
-            transform: translateY(-1rem);
-            transition: transform .3s, opacity .4s;
-            transition-delay: .1s;
-            &:nth-of-type(2) {
-                transition-delay: .17s;
-            }
-            &:nth-of-type(3) {
-                transition-delay: .22s;
-            }
-        }
+		.cs-item {
+			grid-column: span 3;
 
-        .cs-info {
-            right: -100%;
-        }
-
-        .cs-item {
-            &:hover {
-                .cs-socials {
-                    top: 0;
-                }
-
-                .cs-social {
-                    opacity: 1;
-                    transform: translateY(0rem);
-                }
-
-                .cs-info {
-                    right: 0;
-                }
-            }
-        }
-    }
+			&:nth-of-type(odd) {
+				.cs-picture-wrapper {
+					height: (420/16rem);
+				}
+			}
+		}
+	}
 }
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #meet-team-1788 {
-            .cs-title {
+	body.dark-mode {
+		#meet-team-2435 {
+			background-color: var(--dark);
+
+            .cs-title, .cs-text, .cs-name, .cs-job, .cs-rating, .cs-rating-count, .cs-item-text {
                 color: var(--bodyTextColorWhite);
+                transition: color .3s;
             }
-        }
-    }
+		}
+	}
 }
+                                
 
 /*-- -------------------------- -->
 <---       Side By Side         -->
