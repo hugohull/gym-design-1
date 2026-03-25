@@ -8,7 +8,7 @@ permalink: "/equipment/"
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/equipment.css">
-    {# <script src="/assets/js/carousel.js" defer></script> #}
+    <script src="/assets/js/carousel.js" defer></script>
 {% endblock %}
 
 {% block body %}
@@ -280,59 +280,128 @@ permalink: "/equipment/"
     <img class="cs-graphic cs-dark" src="/assets/svgs/splatter-dark.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async"> #}
 </section>
 
-<section id="gallery-380">
+<!-- ============================================ -->
+<!--                   Carousel                   -->
+<!-- ============================================ -->
+<section id="carousel">
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Specific Equipment</span>
             <h2 class="cs-title">Still Not Convinced?</h2>
-            {# <p class="cs-text">
-                At Stitch Cleaning Service, let us help you solve problems so that you can focus on your mission. We support businesses through periods of expansion, succession.
-            </p> #}
         </div>
-        <div class="cs-gallery">
-            <div class="cs-item" href="">
-                <div class="cs-hover-box">
-                    {# <picture class="cs-icon" aria-hidden="true">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/arrows.svg" alt="icon" width="24" height="24">
-                    </picture> #}
-                    <h3 class="cs-h3">Leg Press</h3>
+        <div class="cs-carousel" data-carousel>
+            <button class="cs-arrow cs-arrow-left" type="button" aria-label="Previous slide" data-carousel-prev>
+                <span aria-hidden="true">&#10094;</span>
+            </button>
+
+            <div class="cs-viewport">
+                <div class="cs-track" data-carousel-track>
+                    <div class="cs-item">
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">Leg Press</h3>
+                        </div>
+                        <picture class="cs-image">
+                            <source media="(max-width: 600px)" srcset="/assets/images/equipment/leg-4.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/equipment/leg-4.jpg">
+                            <img loading="lazy" decoding="async" src="/assets/images/equipment/leg-4.jpg" alt="Leg press machine" width="305" height="400">
+                        </picture>
+                    </div>
+
+                    <div class="cs-item">
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">Bench Press</h3>
+                        </div>
+                        <picture class="cs-image">
+                            <source media="(max-width: 600px)" srcset="/assets/images/equipment/upper-1.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/equipment/upper-1.jpg">
+                            <img loading="lazy" decoding="async" src="/assets/images/equipment/upper-1.jpg" alt="Bench press station" width="305" height="400">
+                        </picture>
+                    </div>
+
+                    <div class="cs-item">
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">Squat Rack</h3>
+                        </div>
+                        <picture class="cs-image">
+                            <source media="(max-width: 600px)" srcset="/assets/images/equipment/all-5.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/equipment/all-5.jpg">
+                            <img loading="lazy" decoding="async" src="/assets/images/equipment/all-5.jpg" alt="Squat rack" width="305" height="400">
+                        </picture>
+                    </div>
+
+                    <div class="cs-item">
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">Cable Machine</h3>
+                        </div>
+                        <picture class="cs-image">
+                            <source media="(max-width: 600px)" srcset="/assets/images/equipment/upper-3.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/equipment/upper-3.jpg">
+                            <img loading="lazy" decoding="async" src="/assets/images/equipment/upper-3.jpg" alt="Cable machine" width="630" height="400">
+                        </picture>
+                    </div>
+
+                    <div class="cs-item">
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">Treadmills</h3>
+                        </div>
+                        <picture class="cs-image">
+                            <source media="(max-width: 600px)" srcset="/assets/images/equipment/cardio-1.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/equipment/cardio-1.jpg">
+                            <img loading="lazy" decoding="async" src="/assets/images/equipment/cardio-1.jpg" alt="Row of treadmills" width="630" height="400">
+                        </picture>
+                    </div>
+
+                    <div class="cs-item">
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">Functional Area</h3>
+                        </div>
+                        <picture class="cs-image">
+                            <source media="(max -width: 600px)" srcset="/assets/images/equipment/functional-1.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/equipment/functional-1.jpg">
+                            <img loading="lazy" decoding="async" src="/assets/images/equipment/functional-1.jpg" alt="Functional training area" width="630" height="400">
+                        </picture>
+                    </div>
+                    <div class="cs-item">
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">Cable Machine</h3>
+                        </div>
+                        <picture class="cs-image">
+                            <source media="(max-width: 600px)" srcset="/assets/images/equipment/upper-3.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/equipment/upper-3.jpg">
+                            <img loading="lazy" decoding="async" src="/assets/images/equipment/upper-3.jpg" alt="Cable machine" width="630" height="400">
+                        </picture>
+                    </div>
+
+                    <div class="cs-item">
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">Treadmills</h3>
+                        </div>
+                        <picture class="cs-image">
+                            <source media="(max-width: 600px)" srcset="/assets/images/equipment/cardio-1.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/equipment/cardio-1.jpg">
+                            <img loading="lazy" decoding="async" src="/assets/images/equipment/cardio-1.jpg" alt="Row of treadmills" width="630" height="400">
+                        </picture>
+                    </div>
+
+                    <div class="cs-item">
+                        <div class="cs-hover-box">
+                            <h3 class="cs-h3">Functional Area</h3>
+                        </div>
+                        <picture class="cs-image">
+                            <source media="(max -width: 600px)" srcset="/assets/images/equipment/functional-1.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/equipment/functional-1.jpg">
+                            <img loading="lazy" decoding="async" src="/assets/images/equipment/functional-1.jpg" alt="Functional training area" width="630" height="400">
+                        </picture>
+                    </div>
                 </div>
-                <picture class="cs-image">
-                    <source media="(max-width: 600px)" srcset="/assets/images/equipment/leg-4.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/equipment/leg-4.jpg">
-                    <img loading="lazy" decoding="async" src="/assets/images/equipment/leg-4.jpg" alt="gallery" width="305" height="400">
-                </picture>
             </div>
-            <div class="cs-item" href="">
-                <div class="cs-hover-box">
-                    {# <picture class="cs-icon" aria-hidden="true">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/arrows.svg" alt="icon" width="24" height="24">
-                    </picture> #}
-                    <h3 class="cs-h3">Bench Press</h3>
-                </div>
-                <picture class="cs-image">
-                    <source media="(max-width: 600px)" srcset="/assets/images/equipment/upper-1.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/equipment/upper-1.jpg">
-                    <img loading="lazy" decoding="async" src="/assets/images/equipment/upper-1.jpg" alt="gallery" width="305" height="400">
-                </picture>
-            </div>
-            <div class="cs-item" href="">
-                <div class="cs-hover-box">
-                    {# <picture class="cs-icon" aria-hidden="true">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/arrows.svg" alt="icon" width="24" height="24">
-                    </picture> #}
-                    <h3 class="cs-h3">Squat Rack</h3>
-                </div>
-                <picture class="cs-image">
-                    <source media="(max-width: 600px)" srcset="/assets/images/equipment/all-5.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/equipment/all-5.jpg">
-                    <img loading="lazy" decoding="async" src="/assets/images/equipment/all-5.jpg" alt="gallery" width="305" height="400">
-                </picture>
-            </div>
+
+            <button class="cs-arrow cs-arrow-right" type="button" aria-label="Next slide" data-carousel-next>
+                <span aria-hidden="true">&#10095;</span>
+            </button>
         </div>
     </div>
     <img class="cs-graphic cs-light" src="/assets/svgs/splatter-light.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
-    <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
     <img class="cs-graphic cs-dark" src="/assets/svgs/splatter-dark.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
 </section>
                                 
