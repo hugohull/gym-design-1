@@ -104,9 +104,26 @@
             background-color: var(--lightDark);
 
 			&:hover {
+                .cs-picture {
+                    img {
+                        opacity: .7;
+                        transform: scale(1.2);
+                    }
+                }
 				.cs-social {
 					transform: translateY(0);
 				}
+                 .cs-icon {
+                    opacity: 1;
+                    transform: translateY(0);
+
+                    &:hover {
+                        /* we need to add the hover styles for the cs-link inside the cs-item hover for specifcity. There's a transform none on the cs-link when we hover over the cs-item, so for the transform to work when we hover over the cs-link, we add it while the hover is active on the cs-item. This allows it to be more specific and override the transform 0 it adds to the cs-link */
+                        transform: scale(1.2);
+                        transition: transform .3s;
+                        transition-delay: 0;
+                    }
+                }
 			}
 		}
 
@@ -123,6 +140,7 @@
 			height: 100%;
 			display: block;
 			position: relative;
+            background-color: var(--primaryLight);
 
 			img {
 				width: 100%;
@@ -131,6 +149,7 @@
 				position: absolute;
 				top: 0;
 				left: 0;
+                transition: transform 0.7s, opacity .3s;
 			}
 		}
 
@@ -153,7 +172,7 @@
 				content: "";
 				width: 100%;
 				height: 100%;
-				background: rgba(3, 7, 17, 0.3);
+				background: rgba(3, 7, 17, 0.5);
 				backdrop-filter: blur(22px);
 				display: block;
 				position: absolute;
