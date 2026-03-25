@@ -36,7 +36,10 @@
 			color: var(--secondary);
 		}
 
-		.cs-title,
+		.cs-title, .cs-name{
+            color: (var(--headerColor));
+        }
+
 		.cs-text {
 			max-width: 100%;
 			color: var(--bodyTextColor);
@@ -193,6 +196,7 @@
 			line-height: 1.5em;
 			font-weight: 400;
 			margin: 0;
+            color: var(--primary);
 		}
 
 		.cs-rating {
@@ -273,7 +277,11 @@
 		#meet-team-2435 {
 			background-color: var(--dark);
 
-            .cs-title, .cs-text, .cs-name, .cs-job, .cs-rating, .cs-rating-count, .cs-item-text {
+            .cs-item {
+                background-color: var(--medium);
+            }
+
+            .cs-title, .cs-text, .cs-name, .cs-rating, .cs-rating-count, .cs-item-text {
                 color: var(--bodyTextColorWhite);
                 transition: color .3s;
             }
