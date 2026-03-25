@@ -1,23 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const video = document.querySelector('#services-1838 video');
+    const buttons = document.querySelectorAll('#why-choose-1824 .cs-button');
+    const boxContents = document.querySelectorAll('#why-choose-1824 .cs-box-content');
 
-    if (!video) return;
+    // Function to show the corresponding box content and hide others
+    function showBoxContent(button) {
+        const filterValue = button.getAttribute('data-filter');
 
-    video.muted = true;
-    video.loop = true;
-    video.playsInline = true;
+        boxContents.forEach(box => {
+            if (box.getAttribute('data-box') === filterValue) {
+                box.classList.remove('cs-hidden');
+            } else {
+                box.classList.add('cs-hidden');
+            }
+        });
 
-    const playVideo = () => {
-        const playPromise = video.play();
+        buttons.forEach(btn => {
+            if (btn === button) {
+                btn.classList.add('cs-active');
+            } else {
+                btn.classList.remove('cs-active');
+            }
+        });
+    }
 
-        if (playPromise && typeof playPromise.catch === 'function') {
-            playPromise.catch(() => {
-                // Ignore autoplay interruptions from the browser.
-            });
-        }
-    };
+    // Event listeners for screens below 1024px
+    if (window.matchMedia('(max-width: 1024px)').matches) {
+        buttons.forEach(button => {
+            button.addEventListener('click', () => showBoxContent(button));
+        });
+    }
 
-    playVideo();
-
-    video.addEventListener('ended', playVideo);
+    // Event listeners for screens above 1024px
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => showBoxContent(button));
+        });
+    }
 });
+                                
