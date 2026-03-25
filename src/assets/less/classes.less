@@ -100,6 +100,7 @@
             width: 100%;
             /* removes the default space between table cells that normally exists */
             border-collapse: collapse;
+            // z-index: 1;
         }
 
         .cs-thead,
@@ -144,6 +145,19 @@
             top: 0;
             left: 0;
             z-index: -1;
+        }
+
+        .cs-graphic {
+            width: 100%;
+            min-width: 75rem;
+            height: auto;
+            -o-object-fit: cover;
+            object-fit: cover;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%);
         }
     }
 }
@@ -199,35 +213,11 @@
 @media only screen and (min-width: 0rem) {
     #reviews-1832 {
         padding: var(--sectionPadding);
+        padding-top: clamp(1rem , 6vw, 2rem);
+        background-color: var(--lightDark);
         overflow: hidden;
         position: relative;
         z-index: 1;
-
-        &:before {
-            /* gradient that softens the transition from the pattern to the edge of the section */
-            content: '';
-            width: 100%;
-            height: 20%;
-            background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-            opacity: 1;
-            position: absolute;
-            display: block;
-            top: 0;
-            left: 0;
-        }
-
-        &:after {
-            /* gradient that softens the transition from the pattern to the edge of the section */
-            content: '';
-            width: 100%;
-            height: 20%;
-            background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-            opacity: 1;
-            position: absolute;
-            display: block;
-            bottom: 0;
-            left: 0;
-        }
 
         .cs-container {
             width: 100%;
@@ -264,6 +254,11 @@
             flex-direction: column;
             align-items: center;
             gap: (48/16rem);
+        }
+
+        .cs-flex-group--reverse {
+            /* Keep image on top for mobile; reverse only at tablet+ */
+            flex-direction: column;
         }
 
         .cs-review-group {
@@ -331,8 +326,6 @@
             /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
             width: (372/16em);
             height: (352/16em);
-            /* make a white shadow to fade over the texture background behind it so it hides the fact its a mask on top of the image */
-            box-shadow: rgba(255,255,255, 1) 0px -45px 90px 4px;
             position: relative;
             z-index: -1;
         }
@@ -408,12 +401,18 @@
                 object-fit: cover;
             }
         }
+
+        .cs-dark {
+            display: none;
+        }
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #reviews-1832 {
+        padding-bottom: clamp(6rem, 8vw, 8rem);
+
         .cs-container {
             max-width: (1280/16rem);
         }
@@ -421,6 +420,16 @@
         .cs-flex-group {
             flex-direction: row;
             justify-content: space-between;
+        }
+
+        .cs-flex-group--reverse {
+            flex-direction: row-reverse;
+
+            .cs-quote{
+                left: 0;
+                right: auto;
+                transform: none;
+            }
         }
 
         .cs-image-group {
@@ -447,27 +456,13 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #reviews-1832 {
-            &:before {
-                /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                background: linear-gradient(to bottom,  rgba(8, 32, 50,1) 0%,rgba(8, 32, 50,0) 100%);
-            }
-
-            &:after {
-                /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                background: linear-gradient(to bottom,  rgba(8, 32, 50,0) 0%,rgba(8, 32, 50,1) 100%);
-            }
-
+            background-color: var(--medium);
             .cs-title,
             .cs-text,
             .cs-review-text,
             .cs-name,
             .cs-job {
                 color: var(--bodyTextColorWhite);
-            }
-
-            .cs-image-group {
-                /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                box-shadow: rgba(8, 32, 50, 1) 0px -45px 90px 4px;
             }
 
             .cs-quote {
@@ -503,6 +498,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #events-1764 {
+        background-color: var(--lightDark);
         /* centers buttons */
         text-align: center;
         padding: var(--sectionPadding);
@@ -554,7 +550,7 @@
             list-style: none;
             width: 100%;
             max-width: (413/16rem);
-            background-color: #f7f7f7;
+            background-color: #ffffff;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -562,9 +558,10 @@
             position: relative;
             z-index: 1;
             transition: box-shadow 0.3s, border-color 0.3s;
+            box-shadow: 0px 4px 80px 0px rgba(26, 26, 26, 0.08);
 
             &:hover {
-                box-shadow: 0px 4px 120px 0px #0000001f;
+                box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.1);
                 border-color: none;
 
                 .cs-picture {
@@ -728,6 +725,17 @@
             margin-left: auto;
             color: var(--headerColor);
         }
+
+        .cs-graphic {   
+            width: 100%;
+            min-width: 120rem;
+            height: auto;
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            z-index: 0;
+            transform: translateX(-50%);
+        }
     }
 }
 
@@ -749,6 +757,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #events-1764 {
+            background-color: var(--medium);
             .cs-title,
             .cs-h3,
             .cs-opening,
