@@ -391,16 +391,16 @@
                 object-fit: cover;
             }
         }
-        .cs-graphic {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            min-width: 120rem;
-            height: auto;
-            display: block;
-            z-index: 0;
-        }
+        // .cs-graphic {
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     min-width: 120rem;
+        //     height: auto;
+        //     display: block;
+        //     z-index: 0;
+        // }
 
         .cs-dark {
             display: none;
@@ -508,13 +508,16 @@
 }
 
 /*-- -------------------------- -->
-<---          Gallery           -->
+<---          Carousel          -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #gallery-380 {
         padding: var(--sectionPadding);
+        background-color: var(--lightDark);
+        position: relative;
+        overflow: hidden;
 
         .cs-container {
             width: 100%;
@@ -525,6 +528,7 @@
             align-items: center;
             /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
+            z-index: 1;
         }
 
         .cs-content {
@@ -547,6 +551,7 @@
             flex-direction: column;
             /* 16px - 20px */
             gap: clamp(1rem, 1.5vw, 1.25rem);
+            z-index: 1;
         }
 
         .cs-item {
@@ -619,6 +624,17 @@
             font-weight: 700;
             margin: 0;
             color: #fff;
+        }
+        
+        .cs-graphic {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            min-width: 120rem;
+            height: auto;
+            display: block;
+            z-index: 0;
         }
     }
 }
