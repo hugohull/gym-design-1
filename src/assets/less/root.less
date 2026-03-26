@@ -1253,7 +1253,111 @@
             }
         }
     }
-}                                                         
+}      
+
+/*-- -------------------------- -->
+<---           Logos            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #logos-2350 {
+        padding: var(--sectionPadding);
+        background-color: var(--lightAccent);
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        
+        .cs-container {
+            width: 100%;
+            margin: auto;
+        }
+
+        .cs-track {
+            display: flex;
+            align-items: center;
+            gap: (32/16rem);
+            width: max-content;
+            animation: logos-scroll 30s linear infinite;
+        }
+
+        .cs-row {
+            display: flex;
+            align-items: center;
+            gap: (32/16rem);
+        }
+
+        .cs-logo {
+            height: auto;
+            margin: 0;
+            display: block;
+
+            &.logo1 {
+                width: clamp(104px, 13vw, 178px);
+            }
+
+            &.logo2 {
+                width: clamp(35px, 7vw, 62px);
+            }
+
+            &.logo3 {
+                width: clamp(86px, 15vw, 173px);
+            }
+
+            &.logo4 {
+                width: clamp(112px, 15vw, 187px);
+            }
+
+            &.logo5 {
+                width: clamp(58px, 10vw, 121px);
+            }
+
+            &.logo6 {
+                width: clamp(99px, 10vw, 133px);
+            }
+        }
+    }
+
+    @keyframes logos-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+/* In-between - 650px */
+@media only screen and (min-width: 650px) {
+    #logos-2350 {
+        padding: clamp(1.875rem, 3.91vw, 3.125rem) 1rem;
+
+        .cs-track {
+            gap: (40/16rem);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #logos-2350 {
+            background-color: var(--dark);
+            background-color: rgba(0, 0, 0, 0.2);
+
+            .cs-logo {
+                filter: invert(1) brightness(2) grayscale(1);
+            }
+
+            .cs-background {
+                img {
+                    opacity: 0.05;
+                }
+            }
+        }
+    }
+}
 
 /*-- -------------------------- -->
 <---          Footer            -->
