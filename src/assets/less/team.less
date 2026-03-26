@@ -46,46 +46,6 @@
 			color: var(--bodyTextColor);
 		}
 
-		.cs-button-solid {
-			font-size: (16/16rem);
-			/* 46px - 56px */
-			line-height: clamp(2.875em, 5.5vw, 3.5em);
-			text-decoration: none;
-			font-weight: 700;
-			text-align: center;
-			min-width: (150/16rem);
-			margin: 0;
-			/* prevents padding from adding to the width */
-			box-sizing: border-box;
-			padding: 0 (24/16rem);
-			background-color: var(--primary);
-			border-radius: (4/16rem);
-			color: #fff;
-			display: inline-block;
-			position: relative;
-			z-index: 1;
-
-			&:before {
-				content: "";
-				width: 0%;
-				height: 100%;
-				background: #000;
-				opacity: 1;
-				border-radius: (4/16rem);
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: -1;
-				transition: width 0.3s;
-			}
-
-			&:hover {
-				&:before {
-					width: 100%;
-				}
-			}
-		}
-
 		.cs-card-group {
 			width: 100%;
 			margin: 0;
@@ -429,46 +389,6 @@
             text-align: left;
             margin: 0;
             color: var(--headerColor);
-        }
-
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-	    	font-weight: 700;
-	        text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: '';
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width .3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
         }
 
         .cs-image-group {
