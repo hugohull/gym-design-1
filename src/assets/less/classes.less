@@ -55,7 +55,7 @@
             transition: background-color 0.3s, color 0.3s;
 
             &:hover {
-                background-color: var(--primary);
+                background-color: var(--primaryLight);
                 cursor: pointer;
                 color: #f7f7f7;
             }
@@ -135,6 +135,12 @@
             color: var(--primary);
             border: none;
             display: block;
+            text-decoration: none;
+            transition: 0.3s color;
+
+            &:hover {
+                color: #000;
+            }
         }
 
         .cs-background {
@@ -200,6 +206,10 @@
 
             .cs-cta {
                 color: var(--primaryLight);
+
+                &:hover {
+                    color: #fff;
+                }
             }
         }
     }
@@ -529,7 +539,7 @@
 
         .cs-title {
             /* max width of 18 characters, includes spaces between words */
-            max-width: 18ch;
+            // max-width: 18ch;
             margin: 0;
         }
 
