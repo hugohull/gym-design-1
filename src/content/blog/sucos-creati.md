@@ -6,7 +6,7 @@ author: Hugo Hull Web Designs
 date: 2023-06-08T15:27:34.591Z
 tags:
     - post
-image: /assets/images/blog/landing.jpg
+image: /assets/images/blog/all-1.jpg
 imageAlt: Kitchen
 ---
 
