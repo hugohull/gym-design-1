@@ -11,6 +11,7 @@
 
 /* CodeStitch Core Styles + Reset */
 @media only screen and (min-width: 0rem) {
+
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
         --primary: #ff0000;
@@ -100,6 +101,7 @@
 
 /* Components + Utilities */
 @media only screen and (min-width: 0rem) {
+
     // Hidden screen reader skip nav button
     .skip {
         z-index: -1111111;
@@ -216,6 +218,7 @@
     }
 
     body.dark-mode {
+
         .cs-light,
         .light {
             display: none !important;
@@ -231,12 +234,12 @@
             color: #fff;
         }
 
-        .cs-button-solid{
-            &:before{
+        .cs-button-solid {
+            &:before {
                 background: #fff;
             }
 
-            &:hover{
+            &:hover {
                 color: var(--primary);
             }
         }
@@ -257,40 +260,55 @@
 
 /* Scroll Reveal (fade-in on scroll) */
 .reveal {
-  opacity: 0;
-  transform: translate3d(0, 18px, 0);
-  transition: opacity 600ms ease, transform 600ms ease;
-  will-change: opacity, transform;
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition: opacity 600ms ease, transform 600ms ease;
+    will-change: opacity, transform;
 }
 
 .reveal.is-visible {
-  opacity: 1;
-  transform: none;
+    opacity: 1;
+    transform: none;
 }
 
 /* Variants */
-.reveal[data-reveal="up"]    { transform: translate3d(0, 18px, 0); }
-.reveal[data-reveal="down"]  { transform: translate3d(0, -18px, 0); }
-.reveal[data-reveal="left"]  { transform: translate3d(18px, 0, 0); }
-.reveal[data-reveal="right"] { transform: translate3d(-18px, 0, 0); }
-.reveal[data-reveal="scale"] { transform: scale(0.98); }
+.reveal[data-reveal="up"] {
+    transform: translate3d(0, 18px, 0);
+}
+
+.reveal[data-reveal="down"] {
+    transform: translate3d(0, -18px, 0);
+}
+
+.reveal[data-reveal="left"] {
+    transform: translate3d(18px, 0, 0);
+}
+
+.reveal[data-reveal="right"] {
+    transform: translate3d(-18px, 0, 0);
+}
+
+.reveal[data-reveal="scale"] {
+    transform: scale(0.98);
+}
 
 /* Stagger support (set delay per element via CSS variable) */
 .reveal[data-delay] {
-  transition-delay: var(--reveal-delay, 0ms);
+    transition-delay: var(--reveal-delay, 0ms);
 }
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
-    transition: none;
-    transform: none;
-    opacity: 1;
-  }
+    .reveal {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
 }
 
 /* Base Element Styles */
 @media only screen and (min-width: 0rem) {
+
     h1,
     h2,
     h3,
@@ -346,27 +364,35 @@
 
     /* lato-regular - latin */
     @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/lato-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/lato-v25-latin-regular.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
+
     /* montserrat-700 - latin */
     @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/montserrat-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/montserrat-v31-latin-700.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
+
     /* montserrat-900 - latin */
     @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/montserrat-v31-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        src: url('../fonts/montserrat-v31-latin-900.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
 }
 
@@ -651,39 +677,51 @@
             &:nth-of-type(1) {
                 transition-delay: 0.05s;
             }
+
             &:nth-of-type(2) {
                 transition-delay: 0.1s;
             }
+
             &:nth-of-type(3) {
                 transition-delay: 0.15s;
             }
+
             &:nth-of-type(4) {
                 transition-delay: 0.2s;
             }
+
             &:nth-of-type(5) {
                 transition-delay: 0.25s;
             }
+
             &:nth-of-type(6) {
                 transition-delay: 0.3s;
             }
+
             &:nth-of-type(7) {
                 transition-delay: 0.35s;
             }
+
             &:nth-of-type(8) {
                 transition-delay: 0.4s;
             }
+
             &:nth-of-type(9) {
                 transition-delay: 0.45s;
             }
+
             &:nth-of-type(10) {
                 transition-delay: 0.5s;
             }
+
             &:nth-of-type(11) {
                 transition-delay: 0.55s;
             }
+
             &:nth-of-type(12) {
                 transition-delay: 0.6s;
             }
+
             &:nth-of-type(13) {
                 transition-delay: 0.65s;
             }
@@ -767,6 +805,7 @@
         .cs-dropdown {
             color: var(--bodyTextColorWhite);
             position: relative;
+
             &.cs-active {
                 .cs-drop-ul {
                     height: auto;
@@ -892,27 +931,35 @@
             &:nth-of-type(1) {
                 transition-delay: 0.05s;
             }
+
             &:nth-of-type(2) {
                 transition-delay: 0.1s;
             }
+
             &:nth-of-type(3) {
                 transition-delay: 0.15s;
             }
+
             &:nth-of-type(4) {
                 transition-delay: 0.2s;
             }
+
             &:nth-of-type(5) {
                 transition-delay: 0.25s;
             }
+
             &:nth-of-type(6) {
                 transition-delay: 0.3s;
             }
+
             &:nth-of-type(7) {
                 transition-delay: 0.35s;
             }
+
             &:nth-of-type(8) {
                 transition-delay: 0.4s;
             }
+
             &:nth-of-type(9) {
                 transition-delay: 0.45s;
             }
@@ -1047,6 +1094,7 @@
             color: var(--bodyTextColor);
             display: block;
             position: relative;
+
             &:hover {
                 &:before {
                     width: 100%;
@@ -1162,6 +1210,7 @@
 
         .cs-text {
             margin-bottom: (16/16rem);
+
             &:last-of-type {
                 margin-bottom: (32/16rem);
             }
@@ -1253,7 +1302,7 @@
             }
         }
     }
-}      
+}
 
 /*-- -------------------------- -->
 <---           Logos            -->
@@ -1267,7 +1316,7 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
-        
+
         .cs-container {
             width: 100%;
             margin: auto;
@@ -1322,6 +1371,7 @@
         0% {
             transform: translateX(0);
         }
+
         100% {
             transform: translateX(-50%);
         }
@@ -1483,7 +1533,8 @@
 
         .cs-bottom {
             width: 100%;
-            max-width: (1280/16rem); /* 28px - 40px */
+            max-width: (1280/16rem);
+            /* 28px - 40px */
             margin: 0 auto;
             padding-top: clamp(1.75rem, 3vw, 2.5rem);
             border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -1636,4 +1687,3 @@
         }
     }
 }
-                                

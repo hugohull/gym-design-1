@@ -4,7 +4,9 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #RTsbs-1819, #RTsbst-1819 {
+
+    #RTsbs-1819,
+    #RTsbst-1819 {
         padding: var(--sectionPadding);
         /* 100px - 200px */
         padding-bottom: clamp(6.25rem, 8vw, 12.5rem);
@@ -13,7 +15,7 @@
         overflow: hidden;
         position: relative;
         z-index: 1;
-        
+
         .cs-container {
             width: 100%;
             /* changes to 1280px at desktop */
@@ -41,6 +43,7 @@
 
         .cs-text {
             margin-bottom: (16/16rem);
+
             &:last-of-type {
                 margin-bottom: (32/16rem);
             }
@@ -48,7 +51,7 @@
 
         .cs-image-group {
             /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
-            font-size:~"min(1.8vw, .60rem)";
+            font-size: ~"min(1.8vw, .60rem)";
             /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
             width: (699/16em);
             height: (643/16em);
@@ -119,7 +122,9 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #RTsbs-1819, #RTsbst-1819 {
+
+    #RTsbs-1819,
+    #RTsbst-1819 {
         .cs-container {
             max-width: (1280/16rem);
             flex-direction: row;
@@ -129,7 +134,7 @@
 
         .cs-image-group {
             /* set to inherit at Large Desktop */
-            font-size:~"min(1.2vw, 1rem)";
+            font-size: ~"min(1.2vw, 1rem)";
 
             &:before {
                 display: block;
@@ -145,8 +150,12 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #RTsbs-1819, #RTsbst-1819 { 
-            .cs-title, .cs-text {
+
+        #RTsbs-1819,
+        #RTsbst-1819 {
+
+            .cs-title,
+            .cs-text {
                 color: var(--bodyTextColorWhite);
                 transition: color .3s;
             }
@@ -169,13 +178,15 @@
 /* Dark Mode (Large Desktop) 1500px */
 @media only screen and (min-width: 93.75rem) {
     body.dark-mode {
-        #RTsbs-1819, #RTsbst-1819 {
+
+        #RTsbs-1819,
+        #RTsbst-1819 {
             &:before {
                 /* creates a gradient to fade out the blur into the background color on dark mode. Adjust the color to match whatever the background color you change it to if you decide to use different dark mode colors */
                 content: '';
                 width: 28%;
                 height: (200/16rem);
-                background: linear-gradient(to bottom,  rgba(8,32,50,1) 0%,rgba(255,255,255,0) 100%);
+                background: linear-gradient(to bottom, rgba(8, 32, 50, 1) 0%, rgba(255, 255, 255, 0) 100%);
                 opacity: 1;
                 position: absolute;
                 display: block;
@@ -186,7 +197,7 @@
         }
     }
 }
-                                
+
 /*-- -------------------------- -->
 <---   Side By Side Reverse     -->
 <--- -------------------------- -*/
@@ -202,7 +213,7 @@
         overflow: hidden;
         position: relative;
         z-index: 1;
-        
+
         .cs-container {
             width: 100%;
             /* changes to 1280px at desktop */
@@ -230,6 +241,7 @@
 
         .cs-text {
             margin-bottom: (16/16rem);
+
             &:last-of-type {
                 margin-bottom: (32/16rem);
             }
@@ -317,7 +329,7 @@
 
         .cs-image-group {
             /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
-            font-size:~"min(2.1vw, .70rem)";
+            font-size: ~"min(2.1vw, .70rem)";
             /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
             width: (643/16em);
             height: (608/16em);
@@ -380,7 +392,7 @@
 
         .cs-image-group {
             /* set to inherit at Large Desktop */
-            font-size:~"min(1.1vw, 1rem)";
+            font-size: ~"min(1.1vw, 1rem)";
             flex: none;
             /* sends it to the right in the 2nd position */
             order: 2;
@@ -420,14 +432,19 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #RTsbsr-1819 { 
+        #RTsbsr-1819 {
             background-color: rgba(0, 0, 0, .3);
-            .cs-title, .cs-text, .cs-li-text, .cs-h3 {
+
+            .cs-title,
+            .cs-text,
+            .cs-li-text,
+            .cs-h3 {
                 color: var(--bodyTextColorWhite);
                 transition: color .3s;
             }
 
-            .cs-text, .cs-h3 {
+            .cs-text,
+            .cs-h3 {
                 opacity: .8;
             }
 
@@ -441,11 +458,11 @@
         }
     }
 }
-                                
+
 /*-- -------------------------- -->
 <---   Side By Side Triplet     -->
 <--- -------------------------- -*/
-                                
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #RTsbst-1819 {
@@ -579,7 +596,8 @@
             align-items: center;
             gap: (16/16rem);
 
-            &.cs-active, &:hover {
+            &.cs-active,
+            &:hover {
                 .cs-icon-wrapper {
                     background-color: var(--primary);
                     transition: background-color 1.5s;
@@ -762,7 +780,9 @@
     body.dark-mode {
         #why-choose-1824 {
             background-color: var(--medium);
-            .cs-title, .cs-button-text {
+
+            .cs-title,
+            .cs-button-text {
                 color: var(--bodyTextColorWhite);
             }
 
@@ -787,15 +807,16 @@
             }
 
             .cs-button {
-                .cs-icon{
+                .cs-icon {
                     filter: grayscale(1) brightness(1000%);
                 }
 
-                &.cs-active, &:hover {
-                .cs-icon {
-                    filter: grayscale(1) brightness(0%);
+                &.cs-active,
+                &:hover {
+                    .cs-icon {
+                        filter: grayscale(1) brightness(0%);
+                    }
                 }
-            }
             }
 
             .cs-button {
@@ -809,7 +830,7 @@
         }
     }
 }
-                                
+
 
 /*-- -------------------------- -->
 <---          Services          -->
@@ -994,8 +1015,10 @@
                 content: "";
                 width: 100%;
                 height: 35%;
-                background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+                /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+                /* Chrome10-25,Safari5.1-6 */
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
                 display: block;
                 position: absolute;
@@ -1087,7 +1110,8 @@
         .cs-item {
             grid-column: span 4;
 
-            &:nth-of-type(4), &:nth-of-type(5) {
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
                 grid-column: span 6;
             }
         }
@@ -1111,7 +1135,9 @@
 
         .cs-item {
             grid-column: span 1;
-            &:nth-of-type(4), &:nth-of-type(5) {
+
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
                 grid-column: span 1;
             }
         }
@@ -1136,7 +1162,7 @@
         }
     }
 }
-                                
+
 /*-- -------------------------- -->
 <---       Meet The Team        -->
 <--- -------------------------- -*/
@@ -1331,7 +1357,7 @@
             transition: color 0.3s;
         }
 
-            .cs-graphic {   
+        .cs-graphic {
             width: 100%;
             min-width: 120rem;
             height: auto;
@@ -1389,7 +1415,10 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #meet-team-1746 {
-            .cs-title, .cs-name, .cs-job {
+
+            .cs-title,
+            .cs-name,
+            .cs-job {
                 color: var(--bodyTextColorWhite);
             }
 
@@ -1399,7 +1428,7 @@
         }
     }
 }
-                                
+
 /*-- -------------------------- -->
 <---          Reviews           -->
 <--- -------------------------- -*/
@@ -1408,7 +1437,7 @@
 @media only screen and (min-width: 0rem) {
     #reviews-1832 {
         padding: var(--sectionPadding);
-        padding-top: clamp(1rem , 6vw, 2rem);
+        padding-top: clamp(1rem, 6vw, 2rem);
         background-color: var(--lightDark);
         overflow: hidden;
         position: relative;
@@ -1597,7 +1626,7 @@
             }
         }
 
-        .cs-graphic {   
+        .cs-graphic {
             width: 100%;
             min-width: 120rem;
             height: auto;
@@ -1631,7 +1660,7 @@
         .cs-flex-group--reverse {
             flex-direction: row-reverse;
 
-            .cs-quote{
+            .cs-quote {
                 left: 0;
                 right: auto;
                 transform: none;
@@ -1663,6 +1692,7 @@
     body.dark-mode {
         #reviews-1832 {
             background-color: var(--medium);
+
             .cs-title,
             .cs-text,
             .cs-review-text,
@@ -1695,4 +1725,3 @@
         }
     }
 }
-                                
