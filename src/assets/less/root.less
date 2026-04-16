@@ -258,53 +258,44 @@
     }
 }
 
-// /* Scroll Reveal (fade-in on scroll) */
-// .reveal {
-//     opacity: 0;
-//     transform: translate3d(0, 18px, 0);
-//     transition: opacity 600ms ease, transform 600ms ease;
-//     will-change: opacity, transform;
-// }
+.reveal {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    transition: opacity 600ms ease, transform 600ms ease;
+    will-change: opacity, transform;
+}
 
-// .reveal.is-visible {
-//     opacity: 1;
-//     transform: none;
-// }
+.reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
 
-// /* Variants */
-// .reveal[data-reveal="up"] {
-//     transform: translate3d(0, 18px, 0);
-// }
+/* Variants */
+.reveal[data-reveal="up"] {
+    transform: translate3d(0, 20px, 0);
+}
 
-// .reveal[data-reveal="down"] {
-//     transform: translate3d(0, -18px, 0);
-// }
+.reveal[data-reveal="down"] {
+    transform: translate3d(0, -20px, 0);
+}
 
-// .reveal[data-reveal="left"] {
-//     transform: translate3d(18px, 0, 0);
-// }
+.reveal[data-reveal="scale"] {
+    transform: scale(0.98);
+}
 
-// .reveal[data-reveal="right"] {
-//     transform: translate3d(-18px, 0, 0);
-// }
+/* Stagger support */
+.reveal[data-delay] {
+    transition-delay: var(--reveal-delay, 0ms);
+}
 
-// .reveal[data-reveal="scale"] {
-//     transform: scale(0.98);
-// }
-
-// /* Stagger support (set delay per element via CSS variable) */
-// .reveal[data-delay] {
-//     transition-delay: var(--reveal-delay, 0ms);
-// }
-
-// /* Respect reduced motion */
-// @media (prefers-reduced-motion: reduce) {
-//     .reveal {
-//         transition: none;
-//         transform: none;
-//         opacity: 1;
-//     }
-// }
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}
 
 /* Base Element Styles */
 @media only screen and (min-width: 0rem) {
