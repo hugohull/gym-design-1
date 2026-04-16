@@ -746,11 +746,22 @@
                     display: block;
                 }
             }
+
+            .cs-nav-button-mobile {
+                display: flex; // shows in mobile nav
+            }
         }
 
         .cs-button-solid {
             display: none;
         }
+    }
+}
+
+// Hide when nav is in desktop mode
+@media only screen and (min-width: 48rem) {
+    .cs-nav-button-mobile {
+        display: none;
     }
 }
 
