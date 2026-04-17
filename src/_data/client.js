@@ -1,6 +1,6 @@
 module.exports = {
-    name: "Hugo Hull Web Designs",
-    email: "support@hugohull.com",
+    name: "Our Gym",
+    email: "info@ourgym.com",
     phoneForTel: "0116 123 4567",
     phoneFormatted: "(0116) 123-4567",
     address: {
@@ -20,7 +20,7 @@ module.exports = {
         googleProfile: "https://share.google/8Aj7x49Ea33g1wKxB"
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    domain: "https://www.hugohull.com",
+    domain: "https://www.website.com",
     // Passing the isProduction variable for use in HTML templates
     isProduction: process.env.ELEVENTY_ENV === "PROD",
 };
